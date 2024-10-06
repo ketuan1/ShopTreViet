@@ -1,0 +1,97 @@
+@layer base
+	html, body
+		font-size: 15px
+		@screen md
+			font-size: 15px
+		@screen xl
+			font-size: 1vw
+	.table-responsive
+		@apply overflow-auto
+		@media (max-width: 767.98px)
+			table
+				width: 900px !important
+	.img-full
+		img
+			@apply w-full h-full object-cover
+	.img-ratio
+		position: relative
+		display: block
+		height: 0
+		overflow: hidden
+		padding-top: 100%
+		img,iframe
+			@apply absolute top-0 left-0 w-full h-full object-cover transition-all duration-300
+	.img-ratio-center
+		position: relative
+		height: 0
+		overflow: hidden
+		padding-top: 100%
+		@apply flex-center
+		img,iframe
+			@apply absolute top-1/2 left-1/2 w-auto h-auto object-contain transition-all duration-300 max-w-full max-h-full -translate-x-1/2 -translate-y-1/2
+	.div-ratio
+		position: relative
+		display: block
+		height: 0
+		overflow: hidden
+		padding-top: 100%
+		&>div
+			@apply absolute top-0 left-0 w-full h-full transition-all duration-300
+	body
+		@apply text-[#333333] text-base font-primary
+	.row
+		@apply flex flex-wrap -mx-3.75
+	.col
+		@apply px-3.75 w-full
+	h1
+		@apply text-3xl font-bold
+
+	h2
+		@apply text-2xl font-bold
+
+	h3
+		@apply text-xl font-bold
+
+	h4
+		@apply text-lg font-bold
+
+	img
+		@apply inline max-w-none
+
+	a
+		@apply transition-all ease-linear duration-200
+
+	p
+		@apply empty:hidden
+	input
+		@apply outline-offset-0 shadow-none ring-0 #{!important}
+	.section
+		@apply py-12.5 lg:py-20
+	.section-40
+		@apply lg:py-10 py-6
+	.margin-p
+		p + p
+			@apply mt-5
+	.overflow-scroll-1
+		&::-webkit-scrollbar
+			@apply w-[calc(6/1920*100rem)]
+		&::-webkit-scrollbar-track
+			background-color: rgba(#e5e5e5,.2 )
+		&::-webkit-scrollbar-thumb
+			background-color: #f1f1f1
+	.overlay-black
+		&::before
+			content: ''
+			@apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 pointer-events-none z-10 whitespace-nowrap
+	.homepage
+		@apply bg-white
+		main
+			// @apply overflow-x-hidden
+	.wpml-ls
+		@apply w-auto max-w-none #{!important}
+		a
+			@apply border-0 bg-transparent flex-row-reverse p-0 #{!important}
+			&::after
+				@apply hidden #{!important}
+		.wpml-ls-sub-menu
+			@apply right-auto border-0 #{!important}

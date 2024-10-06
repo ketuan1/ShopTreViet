@@ -1,0 +1,85 @@
+header
+	@apply sticky top-0 z-50 bg-primary-1 text-white py-4 lg:rem:h-[114px] flex items-center h-[80px]
+	.header-logo
+		a
+			@apply inline-block
+			img
+				@apply h-[50px] lg:rem:h-[74px]
+	.header-right
+		nav
+			.header-menu
+				@media (max-width: 1023.98px)
+					@apply fixed top-[90px] left-1/2 -translate-x-1/2 bg-primary-1 w-[calc(100%-15px)] z-[1000] px-5 py-5
+					@apply invisible opacity-0 translate-y-10
+					@apply transition-all duration-300
+					li
+						&[class*="current"]
+							a
+								@apply border-0 border-b border-white
+						a
+							@apply text-3xl font-bold py-2 block
+				@screen lg
+					@apply flex items-center space-x-6 flex-1 justify-between
+					li
+						&:first-child
+							a
+								@apply text-0
+								&::after
+									content: '\f015'
+									@apply font-awesome text-white text-xl font-light
+						&[class*='current']
+							a 
+								&::before
+									@apply opacity-100
+						a
+							@apply text-lg font-semibold pb-5 relative
+							&:hover
+								&::before
+									@apply opacity-100
+							&::before
+								content: ''
+								@apply absolute bottom-0 w-full h-[2px] bg-white opacity-0 transition-all duration-300
+	.header-language
+		@apply relative ml-11
+		.wpml-ls
+			a
+				@apply text-lg font-semibold relative flex items-center gap-2
+				&::before
+					content: '\f0d7'
+					@apply font-awesome text-white text-xs font-black flex-shrink-0
+		.wpml-ls-sub-menu
+			@apply absolute top-full left-0 bg-white p-1 rounded-sm shadow-lg opacity-0 invisible transition-all duration-300 ease-out transform origin-top-right scale-95
+			li
+				a
+					@apply text-center font-bold text-primary-1 block text-base hover:bg-gray-100 p-1 rounded-sm transition-colors duration-200 leading-none
+		&:hover
+			.wpml-ls-sub-menu
+				@apply opacity-100 visible translate-y-0
+	.header-search
+		@apply relative ml-6 cursor-pointer
+.header-search-form
+	visibility: hidden
+	@apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 backdrop-blur-md z-[1000] flex justify-center items-center transition-all duration-300 opacity-0  pointer-events-none
+	&.active
+		@apply opacity-100 visible pointer-events-auto
+	.wrap-form-search-product
+		max-width: r(800px)
+		margin: 0 auto
+		@apply w-full
+		.productsearchbox
+			@apply w-full flex relative flex-wrap
+			[class*="Module"]
+				width: 100% !important
+			input
+				@apply flex-1 h-12.5 bg-white text-base px-7.5 outline-0 border-0 #{!important}
+			button
+				@apply w-12.5 flex items-center justify-center bg-white text-[0px] outline-0 border-0 border-l border-stroke-E0
+				&::before
+					content: '\f002'
+					font-family: "Font Awesome 6 Pro"
+					color: #222222
+					@apply text-base
+body.openMenuMobile
+	header
+		.header-menu
+			@apply visible opacity-100 translate-y-0 #{!important}

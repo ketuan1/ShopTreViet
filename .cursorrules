@@ -1,0 +1,25 @@
+# Rules for each section
+- Always wrap section by tag section with name context by section
+- rule for naming class section within tag main not header and footer: section.section-[name]
+
+# Rules before start coding
+- Always re-read design before start coding
+- Always re-read file tailwind.config.js before start coding
+- Always use @apply to style
+
+# Rule for coding
+- Always priority use grid and flexbox to layout
+- If use flexbox for layout then always like below
+	```pug
+	div.row
+		div.col(class="lg:w-6/12")
+		div.col(class="lg:w-6/12")
+	```
+- If use jitmode text-[16px] then you must to use rem:text-[16px]
+- Structure html optimize for SEO noted tag h1, etc
+- Always use tailwindcss, sass for style and pug for html, jquery for javascript
+- All js will input in file src/js/main.js, if slide then will put in file src/js/swiper.js
+- Don't use select option, only use when it's form
+- all class will use input within tag class like div(class="")
+- Image will put in folder /img/
+- Don't use svg for icon, use font awesome
