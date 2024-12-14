@@ -4,7 +4,8 @@ header
 		a
 			@apply inline-block
 			img
-				@apply h-[50px] lg:rem:h-[74px]
+				@apply h-[50px]
+				// @apply lg:rem:h-[74px]
 	.header-right
 		nav
 			.header-menu
@@ -28,7 +29,7 @@ header
 									content: '\f015'
 									@apply font-awesome text-white text-xl font-light
 						&[class*='current']
-							a 
+							a
 								&::before
 									@apply opacity-100
 						a
@@ -63,11 +64,11 @@ header
 	&.active
 		@apply opacity-100 visible pointer-events-auto
 	.wrap-form-search-product
-		max-width: r(800px)
+		max-width: r(700px)
 		margin: 0 auto
 		@apply w-full
 		.productsearchbox
-			@apply w-full flex relative flex-wrap
+			@apply w-full flex relative flex-wrap rounded-2.5 overflow-hidden
 			[class*="Module"]
 				width: 100% !important
 			input
@@ -79,7 +80,3 @@ header
 					font-family: "Font Awesome 6 Pro"
 					color: #222222
 					@apply text-base
-body.openMenuMobile
-	header
-		.header-menu
-			@apply visible opacity-100 translate-y-0 #{!important}

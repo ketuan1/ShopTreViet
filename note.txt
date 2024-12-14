@@ -1,0 +1,60 @@
+code -> btn-hover icon
+a(class="btn btn-primary")
+	.text Xem tất cả
+	.icon
+
+code swiper basic
+.col-3-products
+	.relative
+		.swiper
+			.swiper-wrapper
+				-for(i=0;i<=3;i++)
+					.swiper-slide
+		.global-slider-style-1 
+			.btn-prev 
+			.btn-next 
+
+code rap form search
+	<div class="wrap-form-search-product">
+		<form class="productsearchbox" action="<?php bloginfo('url') ?>/" method="GET" role="form">
+			<input class="w-full" name="s" class="form-control" type="text" placeholder="Tìm kiếm">
+			<button type="submit">
+			</button>
+		</form>
+	</div>
+
+code pug FAQ
+	section
+		.container 
+			.content-wrapper
+				h3 Câu hỏi thường gặp
+				.faq-full-content(class="flex flex-col gap-4")
+					-for(i=0; i<=3; i++)
+						.main-faq
+							.heading-faq(class="relative flex items-center")
+								.title-faq(class="") Lorem ipsum dolor
+							.content-faq(class="") Lorem ipsum dolor
+Sass -> FAQ
+	.content-wrapper
+		.faq-full-content
+			.main-faq
+				@apply relative p-5 bg-white cursor-pointer
+				&.active-faq
+					@apply border-primary-1 border border-solid
+				.heading-faq::before,
+				.heading-faq::after
+					@apply bg-primary-1 content-[""] absolute top-1/2 duration-300 transition-all
+				.heading-faq::before
+					@apply right-[10px] w-[2px] h-[14px] -mt-[20px]
+				.heading-faq::after
+					@apply right-[4px] w-[14px] h-[2px] -mt-[14px]
+				.heading-faq
+					@apply pb-2
+					&.active
+						&::before
+							transform: rotate(90deg)
+						.number-faq,
+						.title-faq
+							@apply text-primary-1
+				.content-faq
+					@apply hidden
