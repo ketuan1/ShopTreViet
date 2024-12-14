@@ -58,3 +58,13 @@ Sass -> FAQ
 							@apply text-primary-1
 				.content-faq
 					@apply hidden
+
+Scroll top
+	<div id="fixed-tool" class="select-none">
+		<a id="backtop" class="icon_action">
+			<em class="fa-solid fa-arrow-up"></em>
+		</a>
+		<a class="icon_action " href="#">
+			<em class="fa-solid fa-phone"></em>
+		</a>
+	</div>

@@ -25,18 +25,17 @@ export function detectCloseElement(ele, ele2, funcRemove) {
 	// overlay-blur
 }
 export function buttonToTop() {
-	let windowHeight = $(window).height();
 	$(document).on("scroll", function () {
-		let scrollTop = $(window).scrollTop();
-		let documentHeight = $(document).height();
-		if (scrollTop + windowHeight > documentHeight - windowHeight) {
-			$(".button-to-top").addClass("active");
+		if ($(this).scrollTop()) {
+			$("#backtop").fadeIn();
 		} else {
-			$(".button-to-top").removeClass("active");
+			$("#backtop").fadeOut();
 		}
 	});
-	$(document).on("click", ".button-to-top", function () {
-		$("html, body").animate({ scrollTop: 0 });
+	$("#backtop").click(function () {
+		$("html, body").animate({
+			scrollTop: 0
+		}, 1000);
 	});
 }
 
@@ -80,7 +79,7 @@ export function funcExpandContent(listNode) {
 	});
 }
 
-export function clickScrollToDiv(nodeEle, heightSpacing = () => {}) {
+export function clickScrollToDiv(nodeEle, heightSpacing = () => { }) {
 	$(nodeEle).on("click", function (event) {
 		let height = 0;
 		$(this).addClass("active").siblings().removeClass("active");
