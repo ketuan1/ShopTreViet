@@ -8,6 +8,8 @@ $(document).ready(function () {
 	header.init();
 	swiperInit();
 	FAQ();
+	// Scroll_Top();
+	CounterUps();
 });
 
 /*==================== Aos Init ====================*/
@@ -37,6 +39,46 @@ function FAQ() {
 		}
 	});
 }
+
+function CounterUps() {
+	$(document).ready(function () {
+		$(".countup").each(function () {
+			const $this = $(this);
+			const targetNumber = parseInt($this.data("number"));
+			const duration = 1500;
+			const increment = Math.ceil(targetNumber / (duration / 16));
+			let currentNumber = 0;
+			const timer = setInterval(function () {
+				currentNumber += increment;
+				if (currentNumber >= targetNumber) {
+					currentNumber = targetNumber;
+					clearInterval(timer);
+				}
+				$this.text(currentNumber);
+			}, 16);
+		});
+	});
+}
+
+// scroll top
+// function Scroll_Top() {
+// 	jQuery(window).scroll(function () {
+// 		if (jQuery(this).scrollTop()) {
+// 			jQuery("#backtop").fadeIn();
+// 		} else {
+// 			jQuery("#backtop").fadeOut();
+// 		}
+// 	});
+// 	jQuery("#backtop").click(function () {
+// 		jQuery("html, body").animate({
+// 			scrollTop: 0
+// 		}, 1000);
+// 	});
+// }
+
+
+
+
 /*==================== Lazyload JS ====================*/
 const observer = lozad(); // lazy loads elements with default selector as '.lozad'
 observer.observe();

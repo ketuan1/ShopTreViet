@@ -1,9 +1,9 @@
-code -> btn-hover icon
+--> code btn-hover icon
 a(class="btn btn-primary")
 	.text Xem tất cả
 	.icon
 
-code swiper basic
+--> code swiper basic
 .col-3-products
 	.relative
 		.swiper
@@ -14,7 +14,12 @@ code swiper basic
 			.btn-prev 
 			.btn-next 
 
-code rap form search
+--> code grid
+	.grid(class="grid-cols-1 lg:grid-cols-12 gap-10")
+		div(class="grid lg:col-span-7")
+		div(class="grid lg:col-span-5")
+
+--> code rap form search
 	<div class="wrap-form-search-product">
 		<form class="productsearchbox" action="<?php bloginfo('url') ?>/" method="GET" role="form">
 			<input class="w-full" name="s" class="form-control" type="text" placeholder="Tìm kiếm">
@@ -23,7 +28,11 @@ code rap form search
 		</form>
 	</div>
 
-code pug FAQ
+--> code counter up
+span.countup(class="font-bold", data-number="1000") 1000
+div(class="action") +
+
+--> code pug FAQ
 	section
 		.container 
 			.content-wrapper
@@ -34,7 +43,7 @@ code pug FAQ
 							.heading-faq(class="relative flex items-center")
 								.title-faq(class="") Lorem ipsum dolor
 							.content-faq(class="") Lorem ipsum dolor
-Sass -> FAQ
+--> Sass -> FAQ
 	.content-wrapper
 		.faq-full-content
 			.main-faq
@@ -59,7 +68,7 @@ Sass -> FAQ
 				.content-faq
 					@apply hidden
 
-Scroll top
+--> Scroll top
 	<div id="fixed-tool" class="select-none">
 		<a id="backtop" class="icon_action">
 			<em class="fa-solid fa-arrow-up"></em>
@@ -68,3 +77,4 @@ Scroll top
 			<em class="fa-solid fa-phone"></em>
 		</a>
 	</div>
+

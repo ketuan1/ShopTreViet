@@ -11,7 +11,7 @@
 			transform-origin: center left
 	#pulseMe
 		transform-origin: center center
-		@apply bg-[#721114]
+		@apply bg-primary-1
 		@apply pointer-events-none
 		@apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[38px] h-[38px] absolute
 		.bar
@@ -92,3 +92,6 @@ body.openMenuMobile
 			&:nth-child(3)
 				rotate: -45deg
 				translate: rr(4px) rr(-1px)
+	header
+		.header-menu
+			@apply visible opacity-100 h-full w-full

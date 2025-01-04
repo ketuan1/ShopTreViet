@@ -10,7 +10,7 @@ header
 		nav
 			.header-menu
 				@media (max-width: 1023.98px)
-					@apply fixed top-[90px] left-1/2 -translate-x-1/2 bg-primary-1 w-[calc(100%-15px)] z-[1000] px-5 py-5
+					@apply fixed top-[47px] left-1/2 -translate-x-1/2 bg-primary-1 w-[calc(100%-15px)] z-[1000] px-5 py-5
 					@apply invisible opacity-0 translate-y-10
 					@apply transition-all duration-300
 					li
@@ -19,9 +19,12 @@ header
 								@apply border-0 border-b border-white
 						a
 							@apply text-3xl font-bold py-2 block
+					li
+						@apply relative
 				@screen lg
 					@apply flex items-center space-x-6 flex-1 justify-between
 					li
+						@apply relative flex gap-8 items-center
 						&:first-child
 							a
 								@apply text-0
@@ -33,13 +36,36 @@ header
 								&::before
 									@apply opacity-100
 						a
-							@apply text-lg font-semibold pb-5 relative
+							@apply text-lg font-semibold relative
 							&:hover
 								&::before
 									@apply opacity-100
 							&::before
 								content: ''
 								@apply absolute bottom-0 w-full h-[2px] bg-white opacity-0 transition-all duration-300
+					li
+						@apply relative
+						&:hover
+							.sub-menu
+								@apply opacity-100 block
+				.wrap-toggle
+					@apply flex gap-3 xl:gap-2 items-center
+				.sub-menu
+					@apply opacity-0 absolute top-full left-0 w-max h-auto bg-primary-1
+					@apply hidden p-4
+					&.active
+						@apply block opacity-100 static
+					li
+						@apply pb-2
+						&:first-child
+							a
+								@apply text-lg
+								&::after
+									content: ''
+						a
+							@apply text-white
+				i
+					@apply pl-2 text-base font-black text-white
 	.header-language
 		@apply relative ml-11
 		.wpml-ls
