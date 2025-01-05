@@ -78,3 +78,32 @@ div(class="action") +
 		</a>
 	</div>
 
+--> code slider gallery
+section.wrap-slider-product.py-20(class="bg-neutral-300")
+	.container 
+		.main-slider 
+			.relative
+				.swiper
+					.swiper-wrapper 
+						-for(i=0;i<4;i++)
+							.swiper-slide
+								.image(class="ratio:pt-[402_690] img-ratio") 
+									img(src="./img/1.png", alt="")
+		.thumb-slider(class="mt-8") 
+			.relative 
+				.swiper
+					.swiper-wrapper
+						-for(i=0;i<4;i++)
+							.swiper-slide
+								.image(class="ratio:pt-[70_120] img-ratio") 
+									img(src="./img/1.png", alt="")
+				.global-slider-style-1
+					.btn-next
+					.btn-prev
+--> code Sass
+.wrap-slider-product
+	.thumb-slider
+		.swiper-slide-thumb-active
+			img
+				@apply border-2 border-solid border-primary-1
+				@apply overflow-hidden

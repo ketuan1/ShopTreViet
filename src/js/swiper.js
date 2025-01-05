@@ -33,4 +33,37 @@ export default function swiperInit() {
 			},
 		});
 	});
+
+	// slider gallery
+	var sliderThumbnail = new Swiper('.thumb-slider .swiper', {
+		modules: [Autoplay, Navigation],
+		loop: true,
+		autoplay: {
+			delay: 4000,
+		},
+		slidesPerView: 4,
+		spaceBetween: 30,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+
+	});
+	var mainSlider = new Swiper('.main-slider .swiper', {
+		modules: [Thumbs, Autoplay, Navigation],
+		navigation: {
+			nextEl: '.thumb-slider .btn-next',
+			prevEl: '.thumb-slider .btn-prev',
+		},
+		autoplay: {
+			delay: 4000,
+		},
+		loop: true,
+		thumbs: {
+			swiper: sliderThumbnail
+		}
+	});
+	// end
+
+
+
 }

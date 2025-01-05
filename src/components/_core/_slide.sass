@@ -1,51 +1,15 @@
-.wrap-button-slide
-	display: flex
-	align-items: center
-	justify-content: center
-	&.none-static
-		.btn-prev,.btn-next
-			position: absolute !important
-			top: 50%
-			transform: translateY(-50%)
-			@media (max-width: 1279.98px)
-				margin: 0 !important
-		.btn-prev
-			@media (max-width: 1023.98px)
-				right: 94%
-			@media (max-width: 575.98px)
-				right: auto
-				left: 10px
-		.btn-next
-			@media (max-width: 1023.98px)
-				left: 94%
-			@media (max-width: 575.98px)
-				left: auto
-				right: 10px
-	.btn-prev,.btn-next
-		z-index: 9
-		position: static
-		cursor: pointer
-		@media (max-width: 1280px)
-			margin: 20px 5px 0px !important
-		@media (max-width: 575.98px)
-			margin: 15px 5px 0px !important
-		@media (min-width: 1280px)
-			position: absolute
-			top: 50%
-			transform: translateY(-50%)
+.global-slider-style-1
+	@apply flex-center mt-5 xl:mt-0
+	.btn-next,
 	.btn-prev
-		right: 100%
-		margin-right: rr(30px)
-		@media (max-width: 1400px)
-			margin-right: -30px
-		&.btn-arrow
-			transform: rotate(180deg) translateY(1px)
-			transform-origin: center
-			@media (min-width: 1024px)
-				transform-origin: top
-				transform: rotate(180deg) translateY(-50%)
+		@apply text-white bg-primary-1 lg:text-primary-1 font-normal cursor-pointer lg:bg-transparent
+		@apply flex-center gap-3 text-32 font-light z-10
+		@apply rem:w-[60px] rem:h-[60px] rounded-full
 	.btn-next
-		left: 100%
-		margin-left: rr(30px)
-		@media (max-width: 1400px)
-			margin-left: -30px
+		@apply static ml-3 xl:absolute left-full top-1/2  xl:translate-x-2/4
+		&::before
+			@apply content-['\f054'] font-awesome
+	.btn-prev
+		@apply static mr-3 xl:absolute right-full top-1/2  xl:-translate-x-2/4
+		&::before
+			@apply content-['\f053'] font-awesome

@@ -9,8 +9,8 @@ header
 	.header-right
 		nav
 			.header-menu
-				@media (max-width: 1023.98px)
-					@apply fixed top-[47px] left-1/2 -translate-x-1/2 bg-primary-1 w-[calc(100%-15px)] z-[1000] px-5 py-5
+				@media (max-width: 1200px)
+					@apply fixed top-[47px] left-1/2 -translate-x-1/2 bg-primary-1 h-full w-full z-[1000] px-5 py-5
 					@apply invisible opacity-0 translate-y-10
 					@apply transition-all duration-300
 					li
@@ -21,7 +21,7 @@ header
 							@apply text-3xl font-bold py-2 block
 					li
 						@apply relative
-				@screen lg
+				@screen xl
 					@apply flex items-center space-x-6 flex-1 justify-between
 					li
 						@apply relative flex gap-8 items-center
@@ -59,7 +59,7 @@ header
 						@apply pb-2
 						&:first-child
 							a
-								@apply text-lg
+								@apply text-3xl xl:text-lg leading-normal
 								&::after
 									content: ''
 						a

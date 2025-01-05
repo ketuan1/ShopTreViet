@@ -1,5 +1,5 @@
 .header-hambuger
-	@apply flex flex-col gap-2 ml-8 md:ml-11 lg:ml-11 xl:ml-[calc(58/19.2*1rem)] cursor-pointer z-10 relative lg:hidden
+	@apply flex flex-col gap-2 ml-8 md:ml-11 lg:ml-11 xl:ml-[calc(58/19.2*1rem)] cursor-pointer z-10 relative xl:hidden
 	span
 		@apply transition-all duration-300 pointer-events-none
 		@apply w-7 h-1 bg-white relative z-10
@@ -94,4 +94,4 @@ body.openMenuMobile
 				translate: rr(4px) rr(-1px)
 	header
 		.header-menu
-			@apply visible opacity-100 h-full w-full
+			@apply visible opacity-100
