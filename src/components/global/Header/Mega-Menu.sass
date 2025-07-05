@@ -1,0 +1,131 @@
+
+// header
+// 	.header-menu
+// 		> li
+// 			&.menu-item-has-children
+// 				&:hover
+// 					> .mega-menu
+// 						@apply opacity-100 pointer-events-auto translate-y-0
+// 						> div
+// 							> .sub-menu
+// 								> li
+// 									&.menu-item-has-children
+// 										&:first-child
+// 											> a
+// 												@apply text-white bg-primary-1
+// 											> .mega-wrap
+// 												@apply opacity-100 pointer-events-auto
+// 										&.disable-first-highlight
+// 											> a
+// 												@apply bg-transparent text-black
+// 								&:hover
+// 									> li
+// 										&.menu-item-has-children
+// 											//> a
+// 											//	@apply  text-primary-Secondary #{!important}
+// 											> .mega-wrap
+// 												@apply opacity-0 pointer-events-none #{!important}
+// 											&:hover
+// 												> a
+// 													@apply bg-primary-1 text-white #{!important}
+// 												> .mega-wrap
+// 													@apply opacity-100 pointer-events-auto #{!important}
+
+												
+// 	.mega-menu
+// 		@apply absolute top-full left-1/2 -translate-x-1/2 w-full -z-1 bg-[#F5F5F5] py-10 rem:min-h-[380px]
+// 		@apply transition-all duration-200 ease-in-out opacity-0 -translate-y-10 pointer-events-none
+// 		> div
+// 			> .sub-menu
+// 				@apply relative
+// 				&::before
+// 					content: ''
+// 					@apply fixed top-0 h-full w-px bg-neutral-200 rem:left-[32%] z-10 pointer-events-none
+// 				> li
+// 					@apply rem:w-[320px] border-b-[#D9D9D9] border-b border-solid
+// 					> a
+// 						@apply text-xl text-[#091C36] py-3 px-5 block
+// 						@apply  font-primary font-black #{!important}
+
+// 					&:hover
+// 						> a
+// 							@apply text-white bg-primary-1
+// 							&::before
+// 								@apply w-0
+// 					&[class*="current-"]
+// 						> a
+// 							@apply text-primary-1
+// 						&:first-child
+// 							~ li
+// 								&:hover
+// 									.mega-wrap
+// 										@apply z-1
+// 		> div
+// 			> .sub-menu
+// 				li
+// 					a
+// 						@apply text-xl font-semibold
+// 	.mega-wrap
+// 		@apply absolute top-0 rem:left-[320px] w-[calc((1400-320)/1920*100rem)] flex justify-between bg-[#F5F5F5]
+// 		@apply opacity-0 transition-all duration-200 ease-in-out pointer-events-none
+// 		> .sub-menu
+// 			@apply flex-1 pl-25 px-10 gap-x-10 break-before-avoid
+// 			> li
+// 				&:first-child
+// 					> a
+// 						@apply w-fit hidden xl:block
+// 						@apply py-0 #{!important}
+// 				> a
+// 					@apply font-normal text-neutral-950 
+// 					@apply rem:text-[18px] #{!important}
+// 					@apply hover:text-primary-1
+// 				&[class*="current-"]
+// 					> a
+// 						@apply text-primary-1
+// 	.walker-image
+// 		aspect-ratio: 440 / 272
+// 		img
+// 			@apply rem:w-[440px] rem:h-[272px]
+// 			@apply block object-cover
+
+// 	@media (max-width: 1024px)
+// 		.header-menu 
+// 			> li.menu-item-has-children
+// 				.toggle-icon
+// 					@apply flex items-center gap-3
+// 				&.active
+// 					.mega-menu
+// 						transform: none
+// 						translate: none
+// 						@apply static bg-primary-1 opacity-100 block py-0 #{!important}
+// 						@apply overflow-hidden overflow-y-scroll
+// 				> div
+// 					ul.sub-menu
+// 						@apply p-0 block pl-2 #{!important}
+// 						&::before
+// 							@apply content-none
+// 						> li
+// 							&.menu-item-has-children
+// 								@apply w-full
+// 							a
+// 								@apply text-white 
+// 								@apply rem:text-[16px] #{!important}
+// 				&:hover
+// 					> .mega-menu
+// 						> div
+// 							> .sub-menu
+// 								&:hover
+// 									> li
+// 										&.menu-item-has-children
+// 											> .mega-wrap
+// 												@apply opacity-100 pointer-events-auto #{!important}
+// 			.mega-menu
+// 				translate: none !important
+// 				transition: all 0.4s ease-in-out !important
+// 				@apply min-h-full bg-primary-1 translate-x-0
+// 		.mega-wrap
+// 			@apply transition-none
+// 			@apply static bg-primary-1 w-full opacity-100
+// 			> .sub-menu
+// 				li 
+// 					@apply mb-0
