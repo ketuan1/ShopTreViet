@@ -6,26 +6,75 @@ import { Pagination, EffectCreative, Keyboard, Mousewheel, Navigation, Thumbs, E
  */
 export default function swiperInit() {
 
-	$(".col-3-products .swiper").each(function () {
+	$(".banner-page-home .swiper").each(function () {
 		new Swiper(this, {
 			modules: [Pagination, Autoplay, Navigation],
 			slidesPerView: 1,
-			spaceBetween: 2,
+			speed: 1000,
+			effect: "fade",
+			autoplay: {
+				delay: 3500,
+			},
+			loop: true,
+			pagination: {
+				el: $(this).closest('.banner-page-home').find('.swiper-pagination')[0],
+				clickable: true,
+			},
+			navigation: {
+				nextEl: $(this).closest(".banner-page-home").find(".btn-next")[0],
+				prevEl: $(this).closest(".banner-page-home").find(".btn-prev")[0],
+			},
+		});
+	});
+
+	$(".home-cols-2 .swiper").each(function () {
+		new Swiper(this, {
+			modules: [Pagination, Autoplay, Navigation],
+			slidesPerView: 1,
+			spaceBetween: 40,
 			autoplay: {
 				delay: 4000,
 			},
 			loop: true,
 			pagination: {
-				el: $(this).closest('.swiper-cols-1').find('.swiper-pagination')[0],
+				el: $(this).closest('.home-cols-2').find('.swiper-pagination')[0],
 				clickable: true,
 			},
 			navigation: {
-				nextEl: $(this).closest(".col-3-products").find(".btn-next")[0],
-				prevEl: $(this).closest(".col-3-products").find(".btn-prev")[0],
+				nextEl: $(this).closest(".home-cols-2").find(".btn-next")[0],
+				prevEl: $(this).closest(".home-cols-2").find(".btn-prev")[0],
 			},
 			breakpoints: {
 				768: {
+					slidesPerView: 1,	
+				},
+				1290: {
 					slidesPerView: 2,
+				},
+			},
+		});
+	});
+
+	$(".home-cols-3 .swiper").each(function () {
+		new Swiper(this, {
+			modules: [Pagination, Autoplay, Navigation],
+			slidesPerView: 1,
+			spaceBetween: 40,
+			autoplay: {
+				delay: 4000,
+			},
+			loop: true,
+			pagination: {
+				el: $(this).closest('.home-cols-3').find('.swiper-pagination')[0],
+				clickable: true,
+			},
+			navigation: {
+				nextEl: $(this).closest(".home-cols-3").find(".btn-next")[0],
+				prevEl: $(this).closest(".home-cols-3").find(".btn-prev")[0],
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,	
 				},
 				1290: {
 					slidesPerView: 3,
@@ -33,6 +82,64 @@ export default function swiperInit() {
 			},
 		});
 	});
+
+	$(".home-cols-4 .swiper").each(function () {
+		new Swiper(this, {
+			modules: [Pagination, Autoplay, Navigation],
+			slidesPerView: 1,
+			spaceBetween: 40,
+			autoplay: {
+				delay: 4000,
+			},
+			loop: true,
+			pagination: {
+				el: $(this).closest('.home-cols-4').find('.swiper-pagination')[0],
+				clickable: true,
+			},
+			navigation: {
+				nextEl: $(this).closest(".home-cols-4").find(".btn-next")[0],
+				prevEl: $(this).closest(".home-cols-4").find(".btn-prev")[0],
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,	
+				},
+				1290: {
+					slidesPerView: 4,
+				},
+			},
+		});
+	});
+
+	$(".home-cols-5 .swiper").each(function () {
+		new Swiper(this, {
+			modules: [Pagination, Autoplay, Navigation],
+			slidesPerView: 2,
+			spaceBetween: 40,
+			autoplay: {
+				delay: 4000,
+			},
+			loop: true,
+			pagination: {
+				el: $(this).closest('.home-cols-5').find('.swiper-pagination')[0],
+				clickable: true,
+			},
+			navigation: {
+				nextEl: $(this).closest(".home-cols-5").find(".btn-next")[0],
+				prevEl: $(this).closest(".home-cols-5").find(".btn-prev")[0],
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 3,	
+				},
+				1290: {
+					slidesPerView: 5,
+				},
+			},
+		});
+	});
+
+
 
 	// slider gallery
 	var sliderThumbnail = new Swiper('.thumb-slider .swiper', {

@@ -123,3 +123,34 @@ export function appendCaptchaASP() {
 	}
 	appendCaptcha();
 }
+
+export function replaceSvgImages() {
+	$(".img-svg").each(function () {
+		const $img = $(this);
+		const imgURL = $img.attr("src");
+		const imgClass = $img.attr("class");
+		const imgWidth = $img.attr("width");
+		const imgHeight = $img.attr("height");
+
+		$.ajax({
+			url: imgURL,
+			dataType: "text",
+			success: function (svgContent) {
+				// Create a new div to hold the SVG content
+				const $svgDiv = $("<div>").html(svgContent);
+				const $svg = $svgDiv.find("svg");
+
+				// Apply original image attributes to SVG
+				if (imgClass) {
+					$svg.addClass(imgClass);
+				}
+
+				// Replace the image with the SVG
+				$img.replaceWith($svg);
+			},
+			error: function (error) {
+				console.error("Error fetching SVG:", error);
+			},
+		});
+	});
+}

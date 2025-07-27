@@ -1,6 +1,6 @@
 import AOS from "aos";
 import lozad from "lozad";
-import { setBackgroundElement, detectCloseElement, buttonToTop, clickScrollToDiv, appendCaptchaASP } from "./helper";
+import { setBackgroundElement, detectCloseElement, buttonToTop, clickScrollToDiv, appendCaptchaASP, replaceSvgImages } from "./helper";
 import { header_mega_menu } from "./header_mega_menu";
 import { header } from "./header";
 import swiperInit from "./swiper";
@@ -9,15 +9,19 @@ $(document).ready(function () {
 	header_mega_menu.init();
 	header.init();
 	swiperInit();
+	replaceSvgImages();
 	FAQ();
-	// Scroll_Top();
+	buttonToTop();
 	CounterUps();
+	TabNav();
 });
 
 /*==================== Aos Init ====================*/
+setTimeout(() => {
 AOS.init({
-	offset: 100,
-});
+		offset: 100,
+	});
+}, 1000);
 
 /*==================== FAQ =================*/
 function FAQ() {
@@ -42,6 +46,22 @@ function FAQ() {
 	});
 }
 
+function TabNav() {
+	$('.list-tab li:first-child').addClass('active');
+		$('.tab-content').hide();
+		$('.tab-content:first').show();
+
+		$('.list-tab li').click(function(){
+		$('.list-tab li').removeClass('active');
+		$(this).addClass('active');
+		$('.tab-content').hide();
+		
+		var activeTab = $(this).find('a').attr('href');
+		$(activeTab).fadeIn();
+		return false;
+		});
+}
+
 function CounterUps() {
 	$(document).ready(function () {
 		$(".countup").each(function () {
@@ -62,21 +82,6 @@ function CounterUps() {
 	});
 }
 
-// scroll top
-// function Scroll_Top() {
-// 	jQuery(window).scroll(function () {
-// 		if (jQuery(this).scrollTop()) {
-// 			jQuery("#backtop").fadeIn();
-// 		} else {
-// 			jQuery("#backtop").fadeOut();
-// 		}
-// 	});
-// 	jQuery("#backtop").click(function () {
-// 		jQuery("html, body").animate({
-// 			scrollTop: 0
-// 		}, 1000);
-// 	});
-// }
 
 
 

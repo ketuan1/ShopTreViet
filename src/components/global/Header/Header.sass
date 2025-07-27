@@ -51,10 +51,10 @@ header
 				.wrap-toggle
 					@apply flex gap-3 xl:gap-2 items-center
 				.sub-menu
-					@apply opacity-0 absolute top-full left-0 w-max h-auto bg-primary-1
+					@apply opacity-0 static xl:absolute top-full left-0 w-max h-auto bg-primary-1
 					@apply hidden p-4
 					&.active
-						@apply block opacity-100 static
+						@apply block opacity-100
 					li
 						@apply pb-2
 						&:first-child
@@ -65,7 +65,9 @@ header
 						a
 							@apply text-white
 				i
-					@apply pl-2 text-base font-black text-white
+					@apply pl-2 text-base font-black text-white transition-all duration-300 ease-in-out
+					&.open
+						@apply transition-all duration-300 ease-in-out rotate-180
 	.header-language
 		@apply relative ml-11
 		.wpml-ls
