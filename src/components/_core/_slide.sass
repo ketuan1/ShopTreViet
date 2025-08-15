@@ -1,15 +1,16 @@
 .global-slider-style-1
-	@apply flex-center mt-5 xl:mt-0
 	.btn-next,
 	.btn-prev
-		@apply text-white bg-primary-1 lg:text-primary-1 font-normal cursor-pointer lg:bg-transparent
-		@apply flex-center gap-3 text-32 font-light z-10
-		@apply rem:w-[60px] rem:h-[60px] rounded-full
+		@apply text-white font-normal cursor-pointer
+		@apply flex-center gap-3 text-32 font-light z-10 bg-primary-1 rounded-3xl
+		@apply rem:w-[60px] rem:h-[60px] rounded-full absolute top-1/2 -translate-y-1/2
+		&:hover
+			@apply bg-primary-3
 	.btn-next
-		@apply static ml-3 xl:absolute left-full top-1/2  xl:translate-x-2/4
+		@apply rem:right-[100px]
 		&::before
 			@apply content-['\f054'] font-awesome
 	.btn-prev
-		@apply static mr-3 xl:absolute right-full top-1/2  xl:-translate-x-2/4
+		@apply rem:left-[100px]
 		&::before
 			@apply content-['\f053'] font-awesome

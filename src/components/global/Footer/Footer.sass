@@ -1,6 +1,77 @@
-
+.footer-top
+	.wrap-form
+		.form-group
+			@apply relative
+			input
+				@apply w-full rounded-3xl px-3 py-4 rem:h-[60px] border border-solid border-white
+				@apply text-white bg-transparent outline-none rem:text-[16px]
+				&::placeholder
+					@apply text-white
+			.btn-subscribe
+				@apply absolute top-0 right-0 z-1 rem:h-[60px] bg-white items-center
+				.text
+					@apply text-primary-5
+				.icon
+					&::before,
+					&::after
+						@apply text-primary-5
+footer
+	.footer-col-1
+		.footer-logo
+			img
+				@apply rem:w-[190px] rem:h-[60px] object-contain
+		.list-info
+			@apply flex flex-col gap-3
+			.info
+				@apply flex items-center gap-3
+				.icon
+					@apply text-white font-normal rem:text-[16px]
+				.caption
+					@apply text-white rem:text-[16px] leading-5 font-normal
+	.footer-col-2,
+	.footer-col-3
+		.menu-footer
+			ul
+				@apply flex flex-col gap-2
+				li
+					a
+						@apply text-white rem:text-[16px] leading-5 font-normal break-words
+	.footer-col-4
+		.list-pay
+			@apply flex items-center gap-3
+			ul
+				@apply flex items-center gap-3
+				li
+					@apply flex-1
+					a
+						img
+							@apply object-contain rem:w-[80px] rem:h-[80px] xl:rem:w-[100px] xl:rem:h-[100px]
 .wrap-scroll-top
 	#fixed-tool
-		@apply fixed cursor-pointer grid z-[999] right-2.5 bottom-[100px]
+		@apply fixed cursor-pointer grid gap-3 z-[999] right-2.5 bottom-[100px]
 		.icon-action
-			@apply items-center bg-primary-1 flex w-[50px] h-[50px] justify-center duration-[0.15s] transition-all ease-in-out text-white mt-2.5 rounded-[50%]
+			animation: ctaPhoneRing 1s infinite ease-in-out
+			@apply bg-primary-1 flex-center p-2 rem:w-[48px] rem:h-[48px] duration-[0.15s] transition-all ease-in-out text-white rounded-[50%]
+			@apply rem:text-[24px] font-light 
+			img
+				@apply rem:w-[48px] rem:h-[48px] object-cover
+				@apply max-w-max #{!important}
+		.icon_top
+			box-shadow: 4px 4px 32px 16px rgba(0, 0, 0, 0.08)
+			@apply bg-neutral-50 text-neutral-500
+
+@keyframes ctaPhoneRing
+	0%
+		transform: rotate(0) scale(1) skew(1deg)
+	10%
+		transform: rotate(-15deg) scale(1) skew(1deg)
+	20%
+		transform: rotate(15deg) scale(1) skew(1deg)
+	30%
+		transform: rotate(-15deg) scale(1) skew(1deg)
+	40%
+		transform: rotate(15deg) scale(1) skew(1deg)
+	50%
+		transform: rotate(0) scale(1) skew(1deg)
+	100%
+		transform: rotate(0) scale(1) skew(1deg)

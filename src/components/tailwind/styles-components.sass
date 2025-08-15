@@ -1,39 +1,99 @@
 @layer components
-	.item-project-related
-		.img
-			@apply relative
-			&::before
-				content: ''
-				background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000000 100%)
-				opacity: .7
-				@apply w-full h-full absolute pointer-events-none z-10
 	.edge
 		@apply hidden lg:block
-	.item-product-main
-		@apply bg-white rounded-5 border-2 border-white transition-all duration-300 p-5
-		@apply hover:border-2 hover:border-primary-1
-		// @apply min-h-[calc(358/1920*100rem)]
+	.border-animation
+		background: linear-gradient(to right, #033EBC, #033EBC), linear-gradient(to right, #033EBC, #033EBC), linear-gradient(to bottom, #033EBC, #033EBC), linear-gradient(to bottom, #033EBC, #033EBC)
+		background-position: 0% 0%, 100% 100%, 0% 0%, 100% 100%
+		background-size: 0% 2px, 0% 2px, 2px 0%, 2px 0%
+		transition: background-size 0.5s
+		@apply inline-block bg-no-repeat
 		&:hover
-			a
-				@apply text-primary-1
-			.wrap-button
-				opacity: 1
-				@apply translate-y-0
-		a.text-2xl
-			@media (max-width: 1023.98px)
-				+line(1)
-		.wrap-button
-			opacity: 0
-			@apply transition-all duration-300 translate-y-4
-	.tab-style-1
-		@apply  gap-5 lg:gap-10 overflow-auto
-		li
-			&:first-child
-				margin-left: auto
-			&:last-child
-				margin-right: auto
-			&.active
+			background-size: 100% 2px, 100% 2px, 2px 100%, 2px 100%
+	.list-social
+		ul
+			@apply flex items-center gap-3
+			li
 				a
-					@apply bg-primary-1 text-white
-			a
-				@apply flex flex-center px-7 md:px-5 h-[calc(46/1920*100rem)] bg-background-2 uppercase font-bold hover:bg-primary-1 hover:text-white transition-all duration-300 whitespace-nowrap text-base md:text-lg
+					@apply text-white flex-center gap-2 rem:w-[40px] rem:h-[40px] cursor-pointer 
+					@apply rounded-full border border-solid border-white
+					i
+						@apply rem:text-[20px] font-normal
+					img
+						@apply rem:w-[20px] rem:h-[20px] object-contain 
+					&:hover
+						@apply border-primary-1
+	.list-pagination
+		ul
+			@apply flex items-center gap-2
+			li
+				a
+					@apply rem:text-[18px] font-medium leading-5 cursor-pointer
+					@apply rem:w-[45px] rem:h-[45px] rounded-full flex-center bg-primary-1 text-white
+					&:hover
+						@apply bg-primary-3
+				&.active
+					a
+						@apply bg-primary-3
+	.item-product
+		.wrap-btn-add-cart
+			&::after
+				inset-inline-start: calc(50% - 9px)
+				@apply absolute top-[calc(50%_-_9px)] opacity-0 transition-opacity duration-[0.2s] ease-[ease] content-[""] inline-block w-[18px] h-[18px] border align-middle animate-[wd-rotate_450ms_infinite_linear_var(--wd-anim-state,paused)] rounded-[50%] border-l-current border-solid border-[rgba(0,0,0,0)]
+			&.loading
+				&::after
+					animation-play-state: running
+					@apply opacity-100
+	.item-product
+		@apply relative bg-white rounded-xl overflow-hidden
+		.hover-img
+			@apply relative overflow-hidden
+			&:hover
+				@apply transition-all duration-500
+				.wrap-button-view
+					transform: translate3d(0, 0, 0)
+					@apply opacity-100 visible
+				.wrap-btn-add-cart
+					.btn-add-cart
+						@apply opacity-100 pointer-events-auto cursor-pointer transform-none
+		.wrap-button-view
+			box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1)
+			transform: translate3d(20px, 0, 0)
+			@apply absolute rem:top-[20px] rem:right-[10px] opacity-0 invisible transition-all duration-300
+			.btn-actions
+				@apply rem:text-[16px] font-light text-neutral-900 flex-center gap-2
+				@apply rem:w-[36px] rem:h-[36px] cursor-pointer bg-white rounded-lg
+			
+		.wrap-btn-add-cart
+			.btn-add-cart
+				@apply bg-primary-1 text-center text-white rem:text-[14px] font-bold
+				@apply flex-center gap-2 p-3 uppercase absolute rem:min-h-[40px] w-full overflow-hidden
+				@apply bottom-0 right-0 transition-all duration-500
+				@screen sm
+					transform: translateY(calc(100% + 0.1px)) translateZ(0)
+					@apply pointer-events-none opacity-0
+				&:hover
+					@apply bg-primary-3
+					span
+						@apply opacity-0 transition-all duration-300
+					&::before
+						@apply translate-y-0 
+				&::before
+					content: '\f07a'
+					@apply absolute inset-0 flex-center font-awesome rem:text-[20px] font-light translate-y-full transition-all duration-300
+		.content
+			@apply flex flex-col gap-3 text-center px-3 py-6
+			&:hover
+				h3
+					@apply text-primary-3
+			h3
+				@apply text-primary-5 rem:text-[20px] rem:leading-[26px] font-bold
+				@apply line-clamp-2 rem:h-[52px]
+			.category
+				a
+					@apply text-neutral-500 rem:text-[18px] rem:leading-[24px] font-normal
+			.price
+				@apply rem:text-[20px] font-bold text-primary-1 rem:leading-[26px]
+
+	@keyframes wd-rotate
+		100% 
+			transform: rotate(360deg)

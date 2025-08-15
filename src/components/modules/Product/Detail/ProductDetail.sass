@@ -1,0 +1,88 @@
+.section-product-detail
+	.col
+		@apply lg:px-5
+		.product-detail-image
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.06)
+		.box-detail-product-info
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.06)
+			@apply bg-white rounded-xl p-7 flex flex-col gap-3 mb-5
+			.list-tab
+				@apply mb-10 overflow-hidden overflow-x-auto
+				li
+					&.active
+						a
+							@apply bg-primary-1 text-white
+					a
+						@apply bg-white border border-solid border-primary-1 text-primary-5
+						&:hover
+							@apply bg-primary-1 text-white
+			.item-box-info
+				@apply flex flex-col gap-3 mb-3
+		.wrap-product-detail
+			.product-detail-info
+				box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.06)
+				@apply bg-white rounded-xl p-7 flex flex-col gap-3 mb-5
+				h1
+					@apply text-3xl font-bold
+				.sku
+					span
+						@apply text-lg
+						&:first-child
+							@apply text-primary-4 font-bold uppercase
+						&:last-child
+							@apply text-primary-1 font-normal
+				.short-caption
+					@apply rem:text-[16px] leading-5 font-normal
+				.price
+					@apply text-2xl font-bold
+				.category
+					span,
+					a
+						@apply rem:text-[16px] font-normal
+			.single_add_to_cart_button
+				@apply cursor-pointer select-none transition-all duration-300 w-fit
+				@apply inline-flex items-center px-5 border border-primary-1 rounded-full h-11 text-primary-1 font-medium gap-2 transition-all duration-300 bg-white xl:rem:text-[16px]
+				&:hover
+					@apply bg-primary-1 text-white
+				&.disabled
+					@apply pointer-events-none cursor-not-allowed opacity-70
+				&::after
+					content: "\f217"
+					@apply font-awesome rem:w-[18px]
+		.wrap-product-description
+			box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.06)
+			@apply bg-white rounded-xl p-7 flex flex-col gap-3 mb-5
+			h2
+				@apply text-3xl font-bold
+			.list-info
+				@apply flex flex-col gap-2
+				.info
+					@apply flex items-center gap-2
+					.title
+						@apply text-base font-bold text-primary-5 rem:w-[150px]
+					.caption
+						@apply text-base font-normal
+.product-tagline
+	@apply bg-neutral-50 border-l-4 border-primary-1 text-sm font-bold px-5 py-2 
+
+.wrap-faq
+	.item-faq
+		@apply py-4 border-b border-solid border-neutral-200
+		&:last-child
+			@apply border-b-0
+		.title
+			@apply flex-between cursor-pointer text-primary-5 gap-3
+			h3
+				@apply text-lg font-bold
+			i
+				@apply transition-all duration-300 font-normal text-lg
+		.content
+			@apply overflow-hidden transition-all duration-300 max-h-0 rem:text-[16px] leading-5 font-normal
+		&.active
+			@apply transition-all duration-300
+			.title
+				@apply text-primary-1
+				i
+					@apply text-primary-1
+			.content
+				@apply py-3 max-h-full

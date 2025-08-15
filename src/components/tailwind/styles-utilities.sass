@@ -1,7 +1,10 @@
 @layer utilities
-	.section-py
-		@apply py-8 xl:py-15
+	.section-large
+		@apply py-10 lg:py-20
 	.no-gutters
 		@apply mx-0
 		> *
 			@apply px-0
+	.format-content
+		> p
+			@apply mb-4 rem:text-[16px] leading-5 font-normal

@@ -1,0 +1,24 @@
+.section-home-3
+	.wrap-list
+		@apply mb-10 flex
+		ul
+			@apply relative flex items-center gap-5 pb-2 overflow-hidden overflow-x-auto
+			@apply border-solid border-b-neutral-300 border-b
+			li
+				&.active
+					a
+						@apply text-primary-1
+						&::after
+							@apply scale-x-100 w-full
+				a
+					@apply rem:text-[16px] font-semibold text-primary-5 relative leading-5 pb-3
+					&::after
+						content: ''
+						transition: all .3s ease
+						transform: scaleX(0)
+						transform-origin: center
+						@apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary-1 z-1
+					&:hover
+						@apply text-primary-1
+						&::after
+							@apply scale-x-100 w-full

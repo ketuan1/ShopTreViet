@@ -1,32 +1,29 @@
-header.header(class="text-white py-4")
+header.header(class="text-white")
 	.container.mx-auto
-		.row(class="flex items-center justify-between")
+		.row(class="flex items-center")
 			.col(class="w-3/12")
 				.header-logo
-					a(href="/")
-						img(src="/img/logo-canh-cam.png", alt="Mercury Chemical", class="h-12")
-			.col(class="w-9/12 header-right")
-				nav(class="flex items-center justify-end")
+					a(href="/" class="")
+						img(src="/img/logo-white.png", alt="Shop tre viet")
+				.header-logo-sticky 
+					a(href="")
+						img(src="/img/logo.png", alt="Shop tre viet")
+			.col(class="w-9/12 header-right flex justify-end")
+				nav(class="flex items-center justify-end gap-3 lg:gap-6")
 					ul(class="header-menu")
-						li
-							a(href="/", class="") Trang chủ
 						li.current
-							a(href="/ve-chung-toi", class="") Về chúng tôi
+							a(href="/ve-chung-toi", class="") Giới thiệu
 						li.menu-item-has-children
-							a(href="/linh-vuc-hoat-dong", class="") Lĩnh vực hoạt động
+							a(href="/linh-vuc-hoat-dong", class="") Sản phẩm
 							ul.sub-menu 
 								li 
 									a(href="/linh-vuc-hoat-dong") Giới thiệu chung 
 								li 
 									a(href="/linh-vuc-hoat-dong") Sơ đồ tổ chức
 						li
-							a(href="/san-pham", class="") Sản phẩm
+							a(href="/san-pham", class="") Tin tức
 						li
-							a(href="/phat-trien-ben-vung", class="") Phát triển bền vững
-						li
-							a(href="/tin-tuc", class="") Tin tức
-						li
-							a(href="/lien-he", class="") Liên hệ
+							a(href="/phat-trien-ben-vung", class="") Liên hệ
 						
 					.header-language
 						.wpml-ls
@@ -34,9 +31,15 @@ header.header(class="text-white py-4")
 						ul.wpml-ls-sub-menu
 							li
 								a(href="/", class="") VN
+					.header-cart
+						div(class="elbzotech-mini-cart-global elbzotech-mini-cart-dropdown-global")
+							spam(class="mini-cart-icon relative")
+								i(class="fa-thin fa-cart-shopping rem:text-[20px] font-normal")
+								span(class="mini-cart-number set-cart-number") 8
 					div(class="ml-4 header-search")
 						i(class="fa-light fa-magnifying-glass text-xl text-white pointer-events-none")
 					include HeaderHambuger.pug
+				
 .header-search-form
 	.close.flex.items-center.justify-center.absolute.top-0.right-0.bg-white.text-3xl.cursor-pointer(class="w-12.5 h-12.5")
 		i.fa-light.fa-xmark
@@ -45,4 +48,3 @@ header.header(class="text-white py-4")
 			.productsearchbox
 				input(type="text" placeholder="Search here...")
 				button
-				

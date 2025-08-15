@@ -1,4 +1,19 @@
-section.home-1(class="h-screen")
-	img(src="./img/1.png" class="w-full h-full object-cover")
-section.home-1(class="h-screen")
-	img(src="./img/1.png" class="w-full h-full object-cover")
+section.section-home-1
+	.banner-page-home.relative
+		.swiper
+			.swiper-wrapper
+				-for(i=0; i<3; i++)
+					.swiper-slide
+						.image(class="image img-ratio pt-[calc(700/1920*100rem)] lg:pt-[calc(850/1920*100rem)]")
+							img(src="./img/banner.jpg", alt="")
+						.banner-content 
+							.container 
+								.col(class="lg:rem:w-6/12 flex-col gap-5 flex")
+									.sub-title(class="title-24 font-semibold") Đồng hành cùng phát triển
+									h2(class="") TỐI ƯU HÓA QUY TRÌNH NÂNG CAO CHẤT LƯỢNG
+									a(href="" class="btn btn-primary")
+										.text Đặt hàng ngay
+										.icon
+			.global-slider-style-1(class="hidden lg:block")
+				.btn-next
+				.btn-prev

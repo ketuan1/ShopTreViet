@@ -1,11 +1,11 @@
-//btn hover icon
 .btn
-	@apply py-2 px-5 cursor-pointer select-none transition-all duration-300
+	@apply py-3 px-5 cursor-pointer select-none transition-all duration-300 rounded-3xl
 	&.btn-primary
 		@apply flex gap-3 bg-primary-1 border-transparent relative z-2 w-fit overflow-hidden
 		&:hover
+			@apply bg-primary-3
 			.text
-				@apply  bg-primary-1 text-white
+				@apply text-white
 			.icon
 				&::before
 					@apply translate-x-[125%]
@@ -13,7 +13,7 @@
 					@apply translate-x-0 text-white
 		.text
 			@apply flex items-end justify-center text-white text-lg
-			@apply  uppercase font-normal gap-5
+			@apply font-normal gap-5
 			@apply transition-all duration-300
 		&::before
 			content: ''
@@ -28,3 +28,21 @@
 				content: '\f061'
 				font-size: rr(20px)
 				@apply font-awesome inline-block w-full h-full absolute-full transition-all duration-300 font-light text-white
+	&.btn-sw-3
+		@apply flex-center xl:rem:w-[52px] xl:rem:h-[52px] border-[#7C7C7C] border rounded-full text-[#7C7C7C] w-[35px] h-[35px] md:w-[50px] md:h-[50px] flex-shrink-0
+		@apply hover:bg-primary-1  hover:border-primary-1 hover:shadow-[2px_2px_9px_1px_rgba(0,0,0,0.2)] p-0
+		svg
+			@apply rem:w-[30px] rem:h-[30px]
+			@media (max-width: 767.98px)
+				@apply w-6 h-6
+		&:hover
+			path
+				@apply fill-white
+		&.btn-next
+			svg
+				@apply transform rotate-180
+		&.center
+			&:active
+				transform: translateY(-50%) scale(0.9) !important
+		&:active
+			@apply opacity-100 scale-90  #{!important}

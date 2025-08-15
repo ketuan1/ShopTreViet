@@ -1,5 +1,76 @@
-
-
+.footer-top(class="bg-primary-3 py-8")
+	.container 
+		.row.gap-y-5 
+			.col(class="lg:rem:w-6/12 xl:rem:w-8/12")
+				.text-white.mb-3
+					h5(class="text-2xl font-bold mb-3") Đăng ký nhận tin
+					.caption(class="text-white text-lg") Đăng ký để nhận thông tin mới nhất và các ưu đãi đặc biệt từ chúng tôi
+			.col(class="lg:rem:w-6/12 xl:rem:w-4/12")
+				.wrap-form
+					.form-group
+						input(type="email" class="w-full" placeholder="Nhập email của bạn")
+						button(type="submit" class="btn btn-primary btn-subscribe")
+							.text Đăng ký
+							.icon
+footer(class="bg-primary-2 section-large")
+	.container 
+		.row.gap-y-5 
+			.col(class="md:rem:w-6/12 lg:rem:w-3/12")
+				.footer-col-1 
+					.footer-logo.mb-5
+						a(href="")
+							img(src="./img/logo-white.png", alt="")
+					.list-info
+						.info 
+							.icon 
+								i.fa-solid.fa-location-dot
+							.caption 123 Đường ABC, Quận XYZ, TP. HCM
+						.info 
+							.icon 
+								i.fa-solid.fa-phone
+							.caption 0909090909
+						.info 
+							.icon 
+								i.fa-solid.fa-envelope
+							.caption info@example.com
+			.col(class="md:rem:w-6/12 lg:rem:w-3/12")
+				.footer-col-2 
+					h3(class="text-white text-2xl font-bold mb-5") Company
+					.menu-footer 
+						ul 
+							-for(i=0; i<3; i++)
+								li 
+									a(href="") Menu Item
+			.col(class="md:rem:w-6/12 lg:rem:w-3/12")
+				.footer-col-3 
+					h3(class="text-white text-2xl font-bold mb-5") Company
+					.menu-footer 
+						ul 
+							-for(i=0; i<3; i++)
+								li 
+									a(href="") Menu Item
+			.col(class="md:rem:w-6/12 lg:rem:w-3/12")
+				.footer-col-4 
+					h3(class="text-white text-2xl font-bold mb-3") Mua Hàng Online
+					.list-pay 
+						ul 
+							-for(i=0; i<3; i++)
+								li 
+									a(href="" class="")
+										img(src="./img/pay.jpg", alt="" class="lozad")
+.footer-bottom(class="bg-primary-2 py-5 border-t border-solid border-white")
+	.container 
+		.wrap-copyright(class="flex-between flex-wrap gap-2")
+			.text-white.text-center.text-lg
+				p © 2025 Tất cả quyền được bảo lưu.
+			.list-social 
+				ul 
+					-for(i=0; i<3; i++)
+						li 
+							a(href="")
+								i(class="fa-brands fa-facebook-f")
+					
+					
 .wrap-scroll-top 
 	#fixed-tool 
 		a(id="backtop" class="icon-action") 

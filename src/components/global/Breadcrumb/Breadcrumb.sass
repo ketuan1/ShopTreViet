@@ -1,18 +1,22 @@
-.global-breadcrumb
-	@apply bg-[#f1f1f1] border-b border-white
-	p
-		@apply h-[calc(48/1920*100rem)] flex items-center overflow-auto
-		a
-			&:first-child
-				@apply text-0
+.section-page-banner
+	.page-banner-content
+		@apply absolute top-1/2 -translate-y-1/2 left-0 w-full text-white
+
+	.global-breadcrumb
+		@apply absolute bottom-0 left-0 w-full text-white
+		p
+			@apply rem:h-[calc(48/1920*100rem)] flex items-center overflow-auto gap-2
+			a
+				&:first-child
+					@apply text-0
+					&::before
+						content: '\f015'
+						@apply font-awesome text-base
+			a,span
+				@apply text-base text-white whitespace-nowrap
+			span.separator
+				@apply text-0 inline-flex
 				&::before
-					content: '\f015'
-					@apply font-awesome text-sm
-		a,span
-			@apply text-sm text-[#333333] whitespace-nowrap
-		span.separator
-			@apply text-0 inline-flex
-			&::before
-				content: "\f054"
-				@apply font-awesome font-normal text-sm mx-2
+					content: "\f054"
+					@apply font-awesome font-normal text-base mx-2
 

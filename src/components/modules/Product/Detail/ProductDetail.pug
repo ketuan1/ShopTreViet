@@ -1,0 +1,78 @@
+include ../../../global/Breadcrumb/Breadcrumb.pug
+
+section.section-product-detail.section-1(class="section-large bg-[#f6f6f6]")
+	.container
+		.row
+			.col(class="lg:rem:w-8/12")
+				.wrap(class="")
+					.product-detail-image.relative(class="")
+						.swiper
+							.swiper-wrapper
+								-for(i=0;i<6;i++)
+									.swiper-slide
+										a(data-fancybox="gallery" href="./img/1.png" class="img-ratio ratio:pt-[660_920] relative [&_img]:rounded-xl video")
+											img(src="./img/1.png", alt="" class="lozad")
+					.product-detail-thumbnail(class="flex justify-between items-center py-5 ")
+						.btn.btn-prev.btn-sw-3(class="xs:max-md:!hidden")
+							+ArrowLong()
+						.wrap-slide(class="flex-1 max-w-[calc(100%)] md:max-w-[calc(100%-7.5rem)]")
+							.swiper(class="lg:swiper-cols-5 md:swiper-cols-4 swiper-cols-3")
+								.swiper-wrapper
+									-for(i=0;i<6;i++)
+										.swiper-slide
+											.image(class="img-ratio ratio:pt-[100_120] [&_img]:rounded-xl")
+												img(src="./img/1.png", alt="" class="lozad")
+						.btn.btn-next.btn-sw-3(class="xs:max-md:!hidden")
+							+ArrowLong()
+				.box-detail-product-info.mt-10
+					.box-info 
+						.list-tab-info 
+							ul.list-tab.flex.gap-3 
+								li.active
+									a(href="#tab-1" class="btn btn-primary") Thông tin sản phẩm
+								li 
+									a(href="#tab-2" class="btn btn-primary") FAQ
+						.tab-content.active#tab-1
+							.item-box-info
+								.product-tagline Thông tin sản phẩm
+								.content.format-content
+									p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequuntur, illo animi labore dolorum, voluptate nam dolor perferendis excepturi quos vel qui sunt suscipit! Facere perferendis distinctio ratione eligendi impedit.
+									p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequuntur, illo animi labore dolorum, voluptate nam dolor perferendis excepturi quos vel qui sunt suscipit! Facere perferendis distinctio ratione eligendi impedit.
+							.item-box-info 
+								.product-tagline FAQ
+								.content.format-content
+									p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequuntur, illo animi labore dolorum, voluptate nam dolor perferendis excepturi quos vel qui sunt suscipit! Facere perferendis distinctio ratione eligendi impedit.
+									p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequuntur, illo animi labore dolorum, voluptate nam dolor perferendis excepturi quos vel qui sunt suscipit! Facere perferendis distinctio ratione eligendi impedit.
+						.tab-content#tab-2
+							.wrap-faq
+								-for(i=0;i<5;i++)
+									.item-faq
+										.title
+											h3 Câu hỏi thường gặp
+											i.icon.fa-light.fa-plus
+										.content
+											p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequuntur, illo animi labore dolorum, voluptate nam dolor perferendis excepturi quos vel qui sunt suscipit! Facere perferendis distinctio ratione eligendi impedit.
+			.col(class="lg:rem:w-4/12")
+				.wrap-product-detail
+					.product-detail-info
+						h1(class="") Bot chấm công thông minh
+						.sku 
+							span SKU 
+							span(class="text-primary-1") 1234567890
+						.product-tagline Thông tin sản phẩm
+						.short-caption Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam consequuntur, illo animi labore dolorum, voluptate nam dolor perferendis
+						.price 
+							span Giá: 
+							span $25
+						.category 
+							span Danh mục: 
+							a(href="") Sản phẩm, 
+							a(href="") Sản phẩm
+						button(class="single_add_to_cart_button") Thêm vào giỏ 
+					.wrap-product-description
+						h2 Thông số kỹ thuật
+						.list-info
+							-for(i=0;i<5;i++)
+								.info 
+									.title Last Update:
+									.caption November 10, 2020

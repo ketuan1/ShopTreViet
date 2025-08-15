@@ -1,11 +1,49 @@
 header
-	@apply sticky top-0 z-50 bg-primary-1 text-white py-4 lg:rem:h-[114px] flex items-center h-[80px]
-	.header-logo
+	@apply fixed w-full top-0 z-50 text-white flex items-center transition-all duration-300 py-5 xl:py-0
+	&.active
+		@apply bg-white text-primary-5 shadow-lg
+		.header-hambuger
+			span
+				@apply bg-primary-1
+			#pulseMe 
+				.bar
+					@apply bg-primary-1
+					box-shadow: 0 0 0 #033EBC,0 0 1px #033EBC,0 0 1px #033EBC,0 0 4px #033EBC
+		.header-logo
+			@apply hidden
+		.header-logo-sticky
+			@apply block
+		.header-right
+			nav
+				ul
+					li
+						a
+							@apply text-primary-5
+							&:hover
+								@apply text-primary-1
+						i
+							@apply text-primary-5
+		.header-language
+			.wpml-ls
+				a
+					&::before
+						@apply text-primary-5
+		.header-search
+			i
+				@apply text-primary-5
+		.header-cart
+			.mini-cart-number
+				@apply bg-primary-1 text-white
+	.header-logo,
+	.header-logo-sticky
+		@apply transition-all duration-300
 		a
 			@apply inline-block
 			img
-				@apply h-[50px]
-				// @apply lg:rem:h-[74px]
+				@apply rem:w-[190px] rem:h-[60px] object-contain
+	.header-logo-sticky
+		@apply hidden
+
 	.header-right
 		nav
 			.header-menu
@@ -18,31 +56,24 @@ header
 							a
 								@apply border-0 border-b border-white
 						a
-							@apply text-3xl font-bold py-2 block
+							@apply rem:text-[20px] font-bold py-2 block 
+							@apply text-white #{!important}
+						i
+							@apply text-white #{!important}
 					li
 						@apply relative
 				@screen xl
 					@apply flex items-center space-x-6 flex-1 justify-between
 					li
 						@apply relative flex gap-8 items-center
-						&:first-child
-							a
-								@apply text-0
-								&::after
-									content: '\f015'
-									@apply font-awesome text-white text-xl font-light
 						&[class*='current']
-							a
+							> a
 								&::before
 									@apply opacity-100
 						a
-							@apply text-lg font-semibold relative
+							@apply py-8 rem:text-[16px] font-bold relative
 							&:hover
-								&::before
-									@apply opacity-100
-							&::before
-								content: ''
-								@apply absolute bottom-0 w-full h-[2px] bg-white opacity-0 transition-all duration-300
+								@apply text-primary-5
 					li
 						@apply relative
 						&:hover
@@ -51,25 +82,19 @@ header
 				.wrap-toggle
 					@apply flex gap-3 xl:gap-2 items-center
 				.sub-menu
-					@apply opacity-0 static xl:absolute top-full left-0 w-max h-auto bg-primary-1
+					@apply opacity-0 static xl:absolute top-full left-0 xl:rem:w-[300px] h-auto bg-primary-1
 					@apply hidden p-4
 					&.active
 						@apply block opacity-100
 					li
-						@apply pb-2
-						&:first-child
-							a
-								@apply text-3xl xl:text-lg leading-normal
-								&::after
-									content: ''
 						a
-							@apply text-white
+							@apply text-white py-1
 				i
-					@apply pl-2 text-base font-black text-white transition-all duration-300 ease-in-out
+					@apply pl-2 rem:text-[16px] font-bold text-white transition-all duration-300 ease-in-out
 					&.open
 						@apply transition-all duration-300 ease-in-out rotate-180
 	.header-language
-		@apply relative ml-11
+		@apply relative
 		.wpml-ls
 			a
 				@apply text-lg font-semibold relative flex items-center gap-2
@@ -84,6 +109,10 @@ header
 		&:hover
 			.wpml-ls-sub-menu
 				@apply opacity-100 visible translate-y-0
+	.header-cart
+		.mini-cart-number
+			@apply absolute rem:right-[-15px] rem:top-[-10px] rem:w-[16px] rem:h-[16px] rem:text-[13px] rounded-full flex-center bg-white text-primary-1 font-medium
+
 	.header-search
 		@apply relative ml-6 cursor-pointer
 .header-search-form

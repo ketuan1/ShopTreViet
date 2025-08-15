@@ -1,0 +1,48 @@
+.section-product-list
+	.wrap-filter
+		.box-category-menu
+			@apply flex flex-col gap-10 p-5 lg:p-0
+		.filter-category
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+			@apply bg-white rounded-xl p-7
+			.list-filter
+				@apply mt-5
+				ul
+					@apply flex flex-col gap-3
+					li
+						&:last-child
+							a
+								@apply border-b-0
+						a
+							@apply rem:text-[16px] font-medium text-primary-5 leading-5 flex-between gap-2
+							@apply border-b border-solid border-neutral-200 pb-3
+							&:hover
+								@apply text-primary-1
+								span
+									@apply text-primary-1
+	.filter-attribute
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+		@apply bg-white rounded-xl p-7
+		.list-filter
+			@apply mt-5
+			ul
+				@apply flex flex-col gap-3
+				li
+					a
+						@apply rem:text-[16px] font-medium text-primary-5 leading-5 cursor-pointer
+						&:hover
+							@apply text-primary-1
+	.item-product
+		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+
+.box-category-menu
+	@media (max-width: 1024px)
+		@apply fixed top-0 left-0 w-full bg-white z-[999] rounded-none h-[calc(100vh)]
+		@apply flex flex-col px-0 translate-y-full transition-all duration-300
+		@apply opacity-0 pointer-events-none overflow-hidden overflow-y-auto
+		&.active
+			@apply translate-y-0 pointer-events-auto opacity-100
+		.group-category
+			@apply flex-1 overflow-auto px-[15px]
+		.btn-close
+			@apply flex-1 overflow-auto px-[15px]

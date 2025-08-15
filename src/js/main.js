@@ -25,26 +25,38 @@ AOS.init({
 
 /*==================== FAQ =================*/
 function FAQ() {
-	$(".faq-full-content .main-faq:nth-child(1)").addClass("active-faq");
-	$(".faq-full-content .main-faq:nth-child(1) .heading-faq").addClass("active");
-	$(".faq-full-content .main-faq:nth-child(1) .content-faq").slideDown();
-	$(".heading-faq").on("click", function () {
-		var $mainFaq = $(this).closest(".main-faq");
-		if ($(this).hasClass("active")) {
-			$(this).siblings(".content-faq").slideUp();
-			$(this).removeClass("active");
-			$mainFaq.removeClass("active-faq");
-		} else {
-			$(".heading-faq").removeClass("active");
-			$(".content-faq").slideUp();
-			$(".main-faq").removeClass("active-faq");
+	const faqItems = document.querySelectorAll('.item-faq');
 
-			$(this).siblings(".content-faq").slideToggle();
-			$(this).toggleClass("active");
-			$mainFaq.addClass("active-faq");
+	if (faqItems.length > 0) {
+	faqItems[0].classList.add('active');
+	const firstIcon = faqItems[0].querySelector('i');
+	if (firstIcon) {
+		firstIcon.classList.replace('fa-plus', 'fa-minus');
+	}
+	}
+
+	faqItems.forEach(item => {
+	const title = item.querySelector('.title');
+	title.addEventListener('click', function () {
+		faqItems.forEach(faq => {
+		if (faq !== item) {
+			faq.classList.remove('active');
+			faq.querySelector('i').classList.replace('fa-minus', 'fa-plus');
+		}
+		});
+
+		item.classList.toggle('active');
+		const icon = item.querySelector('i');
+		if (item.classList.contains('active')) {
+		icon.classList.replace('fa-plus', 'fa-minus');
+		} else {
+		icon.classList.replace('fa-minus', 'fa-plus');
 		}
 	});
+	});
 }
+
+
 
 function TabNav() {
 	$('.list-tab li:first-child').addClass('active');
@@ -81,6 +93,23 @@ function CounterUps() {
 		});
 	});
 }
+
+jQuery(".box-category-menu .title-sidebar").on("click", function (e) {
+	//e.preventDefault();
+	jQuery(this).toggleClass("active").next().slideToggle();
+});
+jQuery(".box-category-menu .list-filter > ul > li > a").on("click", function (e) {
+	//e.preventDefault();
+	jQuery(this).next().slideToggle();
+	jQuery(this).toggleClass("active").parent().siblings().find("a").removeClass("active");
+});
+
+jQuery(".btn-filter").on("click", function () {
+	jQuery(".box-category-menu").addClass("active");
+});
+jQuery(".box-category-menu .btn-close").on("click", function () {
+	jQuery(".box-category-menu").removeClass("active");
+});
 
 
 

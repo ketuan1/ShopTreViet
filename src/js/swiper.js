@@ -12,9 +12,9 @@ export default function swiperInit() {
 			slidesPerView: 1,
 			speed: 1000,
 			effect: "fade",
-			autoplay: {
-				delay: 3500,
-			},
+			// autoplay: {
+			// 	delay: 5000,
+			// },
 			loop: true,
 			pagination: {
 				el: $(this).closest('.banner-page-home').find('.swiper-pagination')[0],
@@ -137,6 +137,45 @@ export default function swiperInit() {
 				},
 			},
 		});
+	});
+
+	var productThumb = new Swiper(".section-product-detail.section-1 .product-detail-thumbnail .swiper", {
+		slidesPerView: 3,
+		spaceBetween: 15,
+		freeMode: true,
+		watchSlidesProgress: true,
+		spaceBetween: 10,
+		breakpoints: {
+			768: {
+				spaceBetween: 20,
+				slidesPerView: 4,
+			},
+			1024: {
+				spaceBetween: 20,
+				slidesPerView: 4,
+			},
+			1280: {
+				spaceBetween: 20,
+				slidesPerView: 4,
+			},
+		},
+	});
+	var productMain = new Swiper(".section-product-detail.section-1 .product-detail-image .swiper", {
+		spaceBetween: 10,
+		speed: 500,
+		slidesPerView: 1,
+		modules: [Navigation, Thumbs, Pagination],
+		navigation: {
+			prevEl: ".section-product-detail.section-1 .product-detail-thumbnail .btn-prev",
+			nextEl: ".section-product-detail.section-1 .product-detail-thumbnail .btn-next",
+		},
+		thumbs: {
+			swiper: productThumb,
+		},
+		pagination: {
+			el: ".section-product-detail.section-1 .product-detail-thumbnail .swiper-pagination",
+			clickable: true,
+		},
 	});
 
 

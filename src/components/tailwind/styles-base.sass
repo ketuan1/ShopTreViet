@@ -21,6 +21,11 @@
 		padding-top: 100%
 		img,iframe
 			@apply absolute top-0 left-0 w-full h-full object-cover transition-all duration-300
+	.img-zoom
+		@apply overflow-hidden
+		&:hover
+			img
+				@apply scale-110 transition-all duration-500
 	.img-ratio-center
 		position: relative
 		height: 0
