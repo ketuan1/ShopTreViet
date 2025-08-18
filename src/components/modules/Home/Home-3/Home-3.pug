@@ -14,46 +14,12 @@ section.section-home-3.section-large(class="bg-neutral-50")
 			.row.gap-y-8 
 				-for(i=0; i<6; i++)
 					.col(class="w-full sm:rem:w-1/2 xl:rem:w-1/3")
-						.item-product 
-							.hover-img 
-								a(href="" class="img-ratio ratio:pt-[372_420] img-zoom")
-									img(src="./img/1.png", alt="")
-								.wrap-button-view
-									.action-view
-										a(class="btn-view btn-actions")
-											i(class="fa-regular fa-eye")
-								.wrap-btn-add-cart
-									a(class="btn-add-cart")
-										span Thêm vào giỏ
-							.content 
-								h3 
-									a(href="") Grocery & Organic Supermarket Responsive Template
-								.category 
-									a(href="") Blog, 
-									a(href="") Animated
-								.price 400.000 VNĐ
+						+ItemProduct()
 		#tab-2.tab-content.list-product 
 			.row.gap-y-8 
 				-for(i=0; i<6; i++)
 					.col(class="w-full sm:rem:w-1/2 xl:rem:w-1/3")
-						.item-product 
-							.hover-img 
-								a(href="" class="img-ratio ratio:pt-[372_420] img-zoom")
-									img(src="./img/1.png", alt="")
-								.wrap-button-view
-									.action-view
-										a(class="btn-view btn-actions")
-											i(class="fa-regular fa-eye")
-								.wrap-btn-add-cart
-									a(class="btn-add-cart")
-										span Thêm vào giỏ
-							.content 
-								h3 
-									a(href="") Grocery & Organic Supermarket Responsive Template
-								.category 
-									a(href="") Blog, 
-									a(href="") Animated
-								.price 400.000 VNĐ
+						+ItemProduct()
 		a(href="" class="btn btn-primary mx-auto mt-10")
 			.text Xem thêm
 			.icon

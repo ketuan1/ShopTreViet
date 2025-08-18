@@ -10,7 +10,7 @@ section.section-product-detail.section-1(class="section-large bg-[#f6f6f6]")
 							.swiper-wrapper
 								-for(i=0;i<6;i++)
 									.swiper-slide
-										a(data-fancybox="gallery" href="./img/1.png" class="img-ratio ratio:pt-[660_920] relative [&_img]:rounded-xl video")
+										a(data-fancybox="gallery" href="./img/1.png" class="img-ratio ratio:pt-[660_920] relative video")
 											img(src="./img/1.png", alt="" class="lozad")
 					.product-detail-thumbnail(class="flex justify-between items-center py-5 ")
 						.btn.btn-prev.btn-sw-3(class="xs:max-md:!hidden")
@@ -20,7 +20,7 @@ section.section-product-detail.section-1(class="section-large bg-[#f6f6f6]")
 								.swiper-wrapper
 									-for(i=0;i<6;i++)
 										.swiper-slide
-											.image(class="img-ratio ratio:pt-[100_120] [&_img]:rounded-xl")
+											.image(class="img-ratio ratio:pt-[80_120]")
 												img(src="./img/1.png", alt="" class="lozad")
 						.btn.btn-next.btn-sw-3(class="xs:max-md:!hidden")
 							+ArrowLong()
@@ -29,9 +29,9 @@ section.section-product-detail.section-1(class="section-large bg-[#f6f6f6]")
 						.list-tab-info 
 							ul.list-tab.flex.gap-3 
 								li.active
-									a(href="#tab-1" class="btn btn-primary") Thông tin sản phẩm
+									a(href="#tab-1") Thông tin sản phẩm
 								li 
-									a(href="#tab-2" class="btn btn-primary") FAQ
+									a(href="#tab-2") FAQ
 						.tab-content.active#tab-1
 							.item-box-info
 								.product-tagline Thông tin sản phẩm
@@ -76,3 +76,16 @@ section.section-product-detail.section-1(class="section-large bg-[#f6f6f6]")
 								.info 
 									.title Last Update:
 									.caption November 10, 2020
+
+section.section-related-product.section-large
+	.container 
+		h3(class="title-40 font-bold mb-10") Sản phẩm liên quan
+		.home-cols-5.relative
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<6;i++)
+						.swiper-slide
+							+ItemProduct()
+			.global-slider-style-2 
+				.btn-next
+				.btn-prev

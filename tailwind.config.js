@@ -209,9 +209,9 @@ module.exports = {
 			colors: {
 				transparent: "transparent",
 				primary: {
-					1: "#033EBC",
-					2: "#0367A6",
-					3: "#048ABF",
+					1: "#199744",
+					2: "#101D2D",
+					3: "#B1D94E",
 					4: "#03020D",
 					5: "#050A26",
 				},

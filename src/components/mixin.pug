@@ -22,6 +22,25 @@ mixin ProductDetailMain()
 					a(href="" x-title x-link class="text-base md:text-2xl text-center block mt-3") Muối Chấm
 					.wrap-button.flex-center(class="xl:absolute xl:flex hidden top-full w-full")
 						+btnViewAll('Xem thêm').small.mt-2
+mixin ItemProduct 
+	.item-product 
+		.hover-img 
+			a(href="" class="img-ratio ratio:pt-[300_420] img-zoom")
+				img(src="./img/1.png", alt="")
+			.wrap-button-view
+				.action-view
+					a(class="btn-view btn-actions")
+						i(class="fa-regular fa-eye")
+			.wrap-btn-add-cart
+				a(class="btn-add-cart")
+					span Thêm vào giỏ
+		.content 
+			h3 
+				a(href="") Grocery & Organic Supermarket Responsive Template
+			.category 
+				a(href="") Blog, 
+				a(href="") Animated
+			.price 400.000 VNĐ
 mixin ItemNewsMain()
 	.item-news-main(x-loop-item="News" x-loop-mode="NewsItemMain")
 		.img(class="mb-5 rounded-2.5 overflow-hidden zoom-img")

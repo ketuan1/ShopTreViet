@@ -1,12 +1,10 @@
 import AOS from "aos";
 import lozad from "lozad";
 import { setBackgroundElement, detectCloseElement, buttonToTop, clickScrollToDiv, appendCaptchaASP, replaceSvgImages } from "./helper";
-import { header_mega_menu } from "./header_mega_menu";
 import { header } from "./header";
 import swiperInit from "./swiper";
 $(document).ready(function () {
 	setBackgroundElement();
-	header_mega_menu.init();
 	header.init();
 	swiperInit();
 	replaceSvgImages();

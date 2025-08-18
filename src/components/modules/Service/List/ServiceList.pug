@@ -1,0 +1,16 @@
+include ../../../global/Breadcrumb/Breadcrumb.pug
+
+section.section-service-1.section-detail-pro-4.py-20.relative(class="overflow-hidden")
+	.container 
+		.wrapper-feature 
+			.home-cols-feature 
+				.relative 
+					.swiper.overflow-visible
+						.swiper-wrapper 
+							-for(i=0;i<= 5;i++)
+								.swiper-slide 
+									a(data-fancybox="gallery" href="./img/1.png" class="image ratio:pt-[652_1160] img-ratio")
+										img(class="w-full", src="./img/1.png", alt="")
+					.btn-swiper-style-2
+						.button-next
+						.button-prev

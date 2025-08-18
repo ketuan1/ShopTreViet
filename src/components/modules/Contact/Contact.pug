@@ -1,0 +1,50 @@
+include ../../global/Breadcrumb/Breadcrumb.pug
+
+section.section-contact.section-large
+	.container 
+		.gid(class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8")
+			.col(class="lg:col-span-6")
+				.col-left 
+					h2(class="title-40 font-bold mb-6 text-primary-1") CÔNG TY CỔ PHẦN ĐẦU TƯ  TT CAPITAL
+					.list-info(class="flex flex-col gap-3 mb-5")
+						.info 
+							.icon 
+								i.fa-regular.fa-location-dot
+							.wrap-title
+								.title Địa chỉ
+								.caption 123 Đường ABC, Quận XYZ, TP. HCM
+						.info 
+							.icon 
+								i.fa-regular.fa-phone
+							.wrap-title
+								.title Số điện thoại
+								.caption 0909090909
+						.info 
+							.icon 
+								i.fa-regular.fa-envelope
+							.wrap-title
+								.title Email
+								.caption info@example.com
+					.map-main(class="img-ratio ratio:pt-[305_560] rounded-xl overflow-hidden")
+						iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.44223874729!2d105.8510773!3d21.024504799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab8c1de2fed3%3A0x738ad6b826a2780!2zS2jhuqNpIEjhu5MgQ2jhuqNpIEjhu5M!5e0!3m2!1svi!2s!4v1723900800000!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade")
+				
+			.col(class="lg:col-span-6")
+				.col-right 
+					.box-contact 
+						.caption Mọi sự hợp tác tốt đẹp đều bắt đầu từ một cuộc trò chuyện. Hãy liên hệ với chúng tôi, mọi mong muốn của bạn sẽ được lắng nghe.
+						.wrap-form 
+							.form-group 
+								.item 
+									input(type="text" class="w-full" placeholder="Họ và tên")
+								.item 
+									input(type="email" class="w-full" placeholder="Email")
+								.item 
+									input(type="text" class="w-full" placeholder="Số điện thoại")
+								.item 
+									input(type="text" class="w-full" placeholder="Chủ đề")
+								.item 
+									textarea(class="w-full" rows="5" cols="30" placeholder="Nội dung")
+								.item 
+									button(type="submit" class="btn btn-primary")
+										.text Gửi
+										.icon

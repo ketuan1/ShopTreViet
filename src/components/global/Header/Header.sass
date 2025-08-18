@@ -8,7 +8,7 @@ header
 			#pulseMe 
 				.bar
 					@apply bg-primary-1
-					box-shadow: 0 0 0 #033EBC,0 0 1px #033EBC,0 0 1px #033EBC,0 0 4px #033EBC
+					box-shadow: 0 0 0 #199744,0 0 1px #199744,0 0 1px #199744,0 0 4px #199744
 		.header-logo
 			@apply hidden
 		.header-logo-sticky
@@ -19,8 +19,6 @@ header
 					li
 						a
 							@apply text-primary-5
-							&:hover
-								@apply text-primary-1
 						i
 							@apply text-primary-5
 		.header-language
@@ -63,7 +61,7 @@ header
 					li
 						@apply relative
 				@screen xl
-					@apply flex items-center space-x-6 flex-1 justify-between
+					@apply flex items-center space-x-10 flex-1 justify-between
 					li
 						@apply relative flex gap-8 items-center
 						&[class*='current']
@@ -71,9 +69,9 @@ header
 								&::before
 									@apply opacity-100
 						a
-							@apply py-8 rem:text-[16px] font-bold relative
+							@apply py-8 rem:text-[18px] font-bold relative
 							&:hover
-								@apply text-primary-5
+								@apply text-primary-1
 					li
 						@apply relative
 						&:hover
@@ -89,15 +87,17 @@ header
 					li
 						a
 							@apply text-white py-1
+							&:hover
+								@apply text-primary-3
 				i
-					@apply pl-2 rem:text-[16px] font-bold text-white transition-all duration-300 ease-in-out
+					@apply rem:text-[16px] font-bold text-white transition-all duration-300 ease-in-out
 					&.open
 						@apply transition-all duration-300 ease-in-out rotate-180
 	.header-language
 		@apply relative
 		.wpml-ls
 			a
-				@apply text-lg font-semibold relative flex items-center gap-2
+				@apply rem:text-[16px] font-semibold relative flex items-center gap-2
 				&::before
 					content: '\f0d7'
 					@apply font-awesome text-white text-xs font-black flex-shrink-0

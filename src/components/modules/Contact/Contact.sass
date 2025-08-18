@@ -1,0 +1,27 @@
+.section-contact
+	.col-left
+		.list-info
+			.info
+				@apply flex items-start gap-4
+				.icon
+					@apply rem:text-[18px] font-normal text-primary-1
+				.wrap-title
+					@apply flex flex-col gap-1 text-primary-5
+					.title
+						@apply rem:text-[16px] font-bold
+					.caption
+						@apply rem:text-[16px] font-normal
+	.col-right
+		.box-contact
+			box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.08)
+			@apply bg-white p-8 lg:p-12 flex flex-col gap-8
+			.caption
+				@apply rem:text-[16px] font-medium text-primary-5 text-center
+			.wrap-form
+				.form-group
+					@apply flex flex-col gap-5
+					.item
+						input,
+						textarea
+							@apply border border-solid border-neutral-100 px-4 py-3 
+							@apply rem:text-[16px] font-normal outline-none

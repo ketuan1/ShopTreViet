@@ -1,0 +1,23 @@
+.section-about-2
+	.row
+		@apply relative
+		&:nth-child(odd)
+			@apply mb-10 md:mb-0
+			&::before
+				content: ""
+				@apply absolute top-0 right-0 rem:w-[200px] rem:h-[200px]
+				@apply md:border-t-2 md:border-r-2 border-solid border-primary-1 flex-shrink
+			.col
+				@apply md:pr-0
+				.content
+					@apply md:rem:px-[50px] lg:rem:px-[100px]
+		&:nth-child(even)
+			@apply flex-row-reverse
+			&::before
+				content: ""
+				@apply absolute bottom-0 left-0 rem:w-[200px] rem:h-[200px]
+				@apply md:border-b-2 md:border-l-2 border-solid border-primary-1 flex-shrink
+			.col
+				@apply md:pl-0
+				.content
+					@apply md:rem:px-[50px] lg:rem:px-[100px]

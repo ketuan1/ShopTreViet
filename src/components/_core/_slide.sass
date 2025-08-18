@@ -14,3 +14,21 @@
 		@apply rem:left-[100px]
 		&::before
 			@apply content-['\f053'] font-awesome
+
+.global-slider-style-2
+	@apply mt-10 xl:mt-0 flex-center gap-3 flex-row-reverse
+	.btn-next,
+	.btn-prev
+		@apply text-white font-normal cursor-pointer rounded-lg
+		@apply flex-center gap-3 text-2xl font-light z-10 bg-primary-1
+		@apply rem:w-[55px] rem:h-[55px] lg:static xl:absolute top-1/2 -translate-y-1/2
+		&:hover
+			@apply bg-primary-3
+	.btn-next
+		@apply left-full right-auto xl:ml-6
+		&::before
+			@apply content-['\f054'] font-awesome
+	.btn-prev
+		@apply right-full left-auto xl:mr-6
+		&::before
+			@apply content-['\f053'] font-awesome

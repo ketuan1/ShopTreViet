@@ -1,0 +1,21 @@
+.section-service-1
+	.wrapper-feature
+		.home-cols-feature
+			.swiper-slide
+				background: rgba(255, 255, 255, 0.80)
+				backdrop-filter: blur(6px)
+				@apply backdrop-blur-[6px] transition-opacity duration-[0.3s] ease-[ease]
+				@apply opacity-60 overflow-hidden
+				&::before
+					backdrop-filter: blur(6px)
+					background: rgba(255, 255, 255, 0.80)
+					@apply opacity-80 content-[""] absolute-full h-full
+				.image
+					@apply w-full
+				&-active
+					@apply opacity-100 duration-[0.3s] ease-[ease]
+				&:not(.swiper-slide-active)::before
+					@apply block
+				&.swiper-slide-active
+					&::before
+						@apply hidden

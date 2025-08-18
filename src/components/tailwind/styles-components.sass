@@ -2,7 +2,7 @@
 	.edge
 		@apply hidden lg:block
 	.border-animation
-		background: linear-gradient(to right, #033EBC, #033EBC), linear-gradient(to right, #033EBC, #033EBC), linear-gradient(to bottom, #033EBC, #033EBC), linear-gradient(to bottom, #033EBC, #033EBC)
+		background: linear-gradient(to right, #199744, #199744), linear-gradient(to right, #199744, #199744), linear-gradient(to bottom, #199744, #199744), linear-gradient(to bottom, #199744, #199744)
 		background-position: 0% 0%, 100% 100%, 0% 0%, 100% 100%
 		background-size: 0% 2px, 0% 2px, 2px 0%, 2px 0%
 		transition: background-size 0.5s
@@ -44,7 +44,7 @@
 					animation-play-state: running
 					@apply opacity-100
 	.item-product
-		@apply relative bg-white rounded-xl overflow-hidden
+		@apply relative bg-white overflow-hidden
 		.hover-img
 			@apply relative overflow-hidden
 			&:hover
@@ -61,7 +61,7 @@
 			@apply absolute rem:top-[20px] rem:right-[10px] opacity-0 invisible transition-all duration-300
 			.btn-actions
 				@apply rem:text-[16px] font-light text-neutral-900 flex-center gap-2
-				@apply rem:w-[36px] rem:h-[36px] cursor-pointer bg-white rounded-lg
+				@apply rem:w-[36px] rem:h-[36px] cursor-pointer bg-white
 			
 		.wrap-btn-add-cart
 			.btn-add-cart
@@ -72,7 +72,7 @@
 					transform: translateY(calc(100% + 0.1px)) translateZ(0)
 					@apply pointer-events-none opacity-0
 				&:hover
-					@apply bg-primary-3
+					@apply bg-primary-1
 					span
 						@apply opacity-0 transition-all duration-300
 					&::before
@@ -84,7 +84,7 @@
 			@apply flex flex-col gap-3 text-center px-3 py-6
 			&:hover
 				h3
-					@apply text-primary-3
+					@apply text-primary-1
 			h3
 				@apply text-primary-5 rem:text-[20px] rem:leading-[26px] font-bold
 				@apply line-clamp-2 rem:h-[52px]

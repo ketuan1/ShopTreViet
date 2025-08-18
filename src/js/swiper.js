@@ -115,7 +115,7 @@ export default function swiperInit() {
 		new Swiper(this, {
 			modules: [Pagination, Autoplay, Navigation],
 			slidesPerView: 2,
-			spaceBetween: 40,
+			spaceBetween: 20,
 			autoplay: {
 				delay: 4000,
 			},
@@ -135,6 +135,26 @@ export default function swiperInit() {
 				1290: {
 					slidesPerView: 5,
 				},
+			},
+		});
+	});
+
+	$(".home-cols-feature .swiper").each(function () {
+		new Swiper(this, {
+			modules: [Autoplay, Navigation],
+			centeredSlides: true,
+			loop: true,
+			slidesPerView: 1,
+			loopAdditionalSlides: 3,
+			spaceBetween: 68,
+			// autoplay: {
+			// 	delay: 3500,
+			// },
+			observer: true,
+			observeParents: true,
+			navigation: {
+				nextEl: $(this).closest(".home-cols-feature").find(".button-next")[0],
+				prevEl: $(this).closest(".home-cols-feature").find(".button-prev")[0],
 			},
 		});
 	});
