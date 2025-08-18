@@ -1,6 +1,22 @@
 include ../../../global/Breadcrumb/Breadcrumb.pug
 
-section.section-service-1.section-detail-pro-4.py-20.relative(class="overflow-hidden")
+section.section-service-1.section-large 
+	.container 
+		-for(i=0;i<2;i++)
+			.list-service
+				.grid(class="grid-cols-12 rem:gap-[40px] lg:rem:gap-[60px] xl:rem:gap-[80px] mt-10 max-md:grid-cols-1")
+					div(class="col-span-6 max-md:col-span-full") 
+						.image(class="img-ratio ratio:pt-[380_660] img-zoom overflow-hidden")
+							img(src="./img/1.png", alt="" class="lozad")
+					div(class="col-span-6 flex flex-col justify-center max-md:col-span-full") 
+						.content 
+							h3(class="text-2xl font-semibold text-primary-1 mb-5") Our team - global expertise, local presence
+							.format-content 
+								p We are a team of experienced engineers and technicians who are dedicated to providing the best possible service to our clients. We have a global presence and are able to provide services to clients all over the world.
+								p Our team is made up of experienced engineers and technicians who are dedicated to providing the best possible service to our clients. We have a global presence and are able to provide services to clients all over the world.
+
+
+section.section-service-2.section-detail-pro-4.relative(class="overflow-hidden")
 	.container 
 		.wrapper-feature 
 			.home-cols-feature 
@@ -14,3 +30,111 @@ section.section-service-1.section-detail-pro-4.py-20.relative(class="overflow-hi
 					.btn-swiper-style-2
 						.button-next
 						.button-prev
+
+section.section-service-3.section-large 
+	.container 
+		h2(class="title-40 font-bold text-primary-5 mb-10 text-center") Plan your project
+		.wrap-list 
+			ul.list-tab 
+				li.active
+					a(href="#tab-1") WordPress 
+				-for(i=0; i<2; i++)
+					li
+						a(href="#tab-2") WordPress 
+			#tab-1.tab-content
+				.grid(class="lg:grid-cols-3 gap-10")
+					.item 
+						.sub-title(class="text-lg font-normal") Standard
+						.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
+							span.price $13.99
+							span.unit(class="text-sm font-normal") for one month
+						div(class="text-sm font-normal mb-3") billed monthly
+						a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
+							.text.text-center Get started
+						div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
+						.content 
+							.caption.my-2.text-base.font-normal Benefits per month
+							.list-benefit 
+								ul
+									-for(i=0; i<10; i++)
+										li 
+											.icon 
+												<i class="fa-light fa-circle-check"></i>
+											.text 100GB Storage
+					.item 
+						.sub-title(class="text-lg font-normal") Standard
+						.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
+							span.price $13.99
+							span.unit(class="text-sm font-normal") for one month
+						div(class="text-sm font-normal mb-3") billed monthly
+						a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
+							.text.text-center Get started
+						div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
+						.content 
+							.caption.my-2.text-base.font-normal Benefits per month
+							.list-benefit 
+								ul
+									-for(i=0; i<10; i++)
+										li 
+											.icon 
+												<i class="fa-light fa-circle-check"></i>
+											.text 100GB Storage
+					.item 
+						.sub-title(class="text-lg font-normal") Standard
+						.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
+							span.price $13.99
+							span.unit(class="text-sm font-normal") for one month
+						div(class="text-sm font-normal mb-3") billed monthly
+						a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
+							.text.text-center Get started
+						div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
+						.content 
+							.caption.my-2.text-base.font-normal Benefits per month
+							.list-benefit 
+								ul
+									-for(i=0; i<10; i++)
+										li 
+											.icon 
+												<i class="fa-light fa-circle-check"></i>
+											.text 100GB Storage
+			#tab-2.tab-content 
+				.grid(class="lg:grid-cols-3 gap-10")
+					-for(i=0; i<3; i++)
+						.item 
+							.sub-title(class="text-lg font-normal") Standard
+							.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
+								span.price $13.99
+								span.unit(class="text-sm font-normal") for one month
+							div(class="text-sm font-normal mb-3") billed monthly
+							a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
+								.text.text-center Get started
+							div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
+							.content 
+								.caption.my-2.text-base.font-normal Benefits per month
+								.list-benefit 
+									ul
+										-for(i=0; i<10; i++)
+											li 
+												.icon 
+													<i class="fa-light fa-circle-check"></i>
+												.text 100GB Storage
+
+	#popup-service.hidden 
+		.wrapper-popup 
+			.popup-content 
+				h3(class="title-40 font-bold text-primary-5 mb-10 text-center") Plan your project
+				.wrap-form 
+					.form-group 
+						.item 
+							input(type="text" class="input-form" placeholder="Name")
+						.item 
+							input(type="text" class="input-form" placeholder="Email")
+						.item 
+							input(type="text" class="input-form" placeholder="Phone")
+						.item 
+							textarea(type="text" rows="5" cols="30" class="input-form" placeholder="Message")
+						.item(class="flex justify-between items-center") 
+							button(class="btn btn-primary") 
+								.text Send
+								.icon
+							div recapcha

@@ -1,4 +1,11 @@
 .section-service-1
+	.list-service
+		&:nth-of-type(even)
+			.col-span-6
+				&:nth-of-type(even)
+					@apply lg:-order-1
+
+.section-service-2
 	.wrapper-feature
 		.home-cols-feature
 			.swiper-slide
@@ -19,3 +26,52 @@
 				&.swiper-slide-active
 					&::before
 						@apply hidden
+
+.section-service-3
+	.wrap-list
+		ul.list-tab
+			@apply relative flex items-center gap-6 pb-2 overflow-hidden overflow-x-auto mb-10
+			@apply justify-center
+			li
+				&.active
+					a
+						@apply text-primary-1
+						&::after
+							@apply scale-x-100 w-full
+				a
+					@apply rem:text-[16px] font-semibold text-primary-5 relative leading-5 pb-3
+					&::after
+						content: ''
+						transition: all .3s ease
+						transform: scaleX(0)
+						transform-origin: center
+						@apply absolute bottom-0 left-0 w-0 rem:h-[4px] bg-primary-1 z-1
+					&:hover
+						@apply text-primary-1
+						&::after
+							@apply scale-x-100 w-full
+
+	.tab-content
+		.item
+			backdrop-filter: blur(16.4027709961px)
+			background: linear-gradient(195deg,#00ff5b1a,#00ff5b05,#00ff5b0f)
+			@apply border-2 border-solid border-primary-1 px-5 py-8 rounded-3xl text-primary-5
+			.content
+				ul
+					@apply flex flex-col gap-2
+					li
+						@apply flex items-center gap-2
+						i
+							@apply text-sm font-light
+						.text
+							@apply text-sm font-normal
+#popup-service
+	@apply bg-white rounded-3xl rem:max-w-[900px] w-full
+	.wrapper-popup
+		.form-group
+			@apply flex flex-col gap-5
+			.item
+				input,
+				textarea
+					@apply border border-solid border-neutral-300 px-4 py-3 
+					@apply rem:text-[16px] font-normal outline-none w-full rounded-lg

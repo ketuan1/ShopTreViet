@@ -146,7 +146,7 @@ export default function swiperInit() {
 			loop: true,
 			slidesPerView: 1,
 			loopAdditionalSlides: 3,
-			spaceBetween: 68,
+			spaceBetween: 40,
 			// autoplay: {
 			// 	delay: 3500,
 			// },
@@ -155,6 +155,12 @@ export default function swiperInit() {
 			navigation: {
 				nextEl: $(this).closest(".home-cols-feature").find(".button-next")[0],
 				prevEl: $(this).closest(".home-cols-feature").find(".button-prev")[0],
+			},
+			breakpoints: {
+				1290: {
+					slidesPerView: 1.2,
+					spaceBetween: 68,
+				},
 			},
 		});
 	});
