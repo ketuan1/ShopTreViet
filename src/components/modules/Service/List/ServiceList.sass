@@ -53,12 +53,22 @@
 
 	.tab-content
 		.item
-			@apply px-5 py-8 rounded-3xl text-primary-5 flex flex-col gap-2
+			@apply px-5 py-8 rounded-3xl text-primary-5 flex flex-col gap-2 relative
+			.wrap-label
+				transform: rotate(90deg)
+				@apply absolute top-0 left-auto right-0 rem:w-[150px] overflow-hidden rem:h-[150px]
+				.caption
+					transform: translateY(-50%) translateX(-50%) translateX(35px) rotate(-45deg)
+					@apply text-center rem:w-[120%] rem:mt-[35px] text-base rem:leading-[2] 
+					@apply bg-primary-1 uppercase text-white
 			&:nth-child(1)
 				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
 				@apply border-2 border-solid border-primary-1
 			&:nth-child(2)
 				@apply bg-primary-1 text-white
+				.wrap-label
+					.caption
+						@apply bg-white text-primary-1
 				.img
 					i
 						@apply text-white
