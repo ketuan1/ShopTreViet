@@ -43,81 +43,52 @@ section.section-service-3.section-large
 						a(href="#tab-2") WordPress 
 			#tab-1.tab-content
 				.grid(class="lg:grid-cols-3 gap-10")
-					.item 
-						.sub-title(class="text-lg font-normal") Standard
-						.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
-							span.price $13.99
-							span.unit(class="text-sm font-normal") for one month
-						div(class="text-sm font-normal mb-3") billed monthly
-						a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
-							.text.text-center Get started
-						div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
-						.content 
-							.caption.my-2.text-base.font-normal Benefits per month
-							.list-benefit 
-								ul
-									-for(i=0; i<10; i++)
-										li 
-											.icon 
-												<i class="fa-light fa-circle-check"></i>
-											.text 100GB Storage
-					.item 
-						.sub-title(class="text-lg font-normal") Standard
-						.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
-							span.price $13.99
-							span.unit(class="text-sm font-normal") for one month
-						div(class="text-sm font-normal mb-3") billed monthly
-						a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
-							.text.text-center Get started
-						div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
-						.content 
-							.caption.my-2.text-base.font-normal Benefits per month
-							.list-benefit 
-								ul
-									-for(i=0; i<10; i++)
-										li 
-											.icon 
-												<i class="fa-light fa-circle-check"></i>
-											.text 100GB Storage
-					.item 
-						.sub-title(class="text-lg font-normal") Standard
-						.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
-							span.price $13.99
-							span.unit(class="text-sm font-normal") for one month
-						div(class="text-sm font-normal mb-3") billed monthly
-						a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
-							.text.text-center Get started
-						div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
-						.content 
-							.caption.my-2.text-base.font-normal Benefits per month
-							.list-benefit 
-								ul
-									-for(i=0; i<10; i++)
-										li 
-											.icon 
-												<i class="fa-light fa-circle-check"></i>
-											.text 100GB Storage
-			#tab-2.tab-content 
-				.grid(class="lg:grid-cols-3 gap-10")
-					-for(i=0; i<3; i++)
+					-for(j=0; j<3; j++)
 						.item 
-							.sub-title(class="text-lg font-normal") Standard
-							.wrap-price(class="flex gap-2 text-4xl font-semibold pt-2") 
-								span.price $13.99
-								span.unit(class="text-sm font-normal") for one month
-							div(class="text-sm font-normal mb-3") billed monthly
-							a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
-								.text.text-center Get started
-							div(class="mt-5 max-w-full h-[1px] bg-[#252c27] rem:w-[232px]")
+							.img 
+								i(class="fa-light fa-gem")
+							h3(class="text-5xl font-bold") Basic
+							span(class="text-lg font-medium") Purchase Our Basic Plan.
+							.wrap-price(class="flex gap-2 text-4xl font-semibold") 
+								span.currency(class="items-start text-lg font-bold") $
+								span.price(class="text-6xl font-bold") 13.99
+								div(class="self-end mb-1")
+									span.unit(class="text-lg font-medium") Monthly
 							.content 
-								.caption.my-2.text-base.font-normal Benefits per month
+								.desc(class="text-lg font-medium mb-5") bEssential features for individuals or small teams, limited support. 
 								.list-benefit 
 									ul
-										-for(i=0; i<10; i++)
+										-for(i=0; i<6; i++)
 											li 
 												.icon 
 													<i class="fa-light fa-circle-check"></i>
 												.text 100GB Storage
+							a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
+								.text.text-center Get started
+			#tab-2.tab-content
+				.grid(class="lg:grid-cols-3 gap-10")
+					-for(j=0; j<3; j++)
+						.item 
+							.img 
+								i(class="fa-light fa-gem")
+							h3(class="text-5xl font-bold") Basic
+							span(class="text-lg font-medium") Purchase Our Basic Plan.
+							.wrap-price(class="flex gap-2 text-4xl font-semibold") 
+								span.currency(class="items-start text-lg font-bold") $
+								span.price(class="text-6xl font-bold") 13.99
+								div(class="self-end mb-1")
+									span.unit(class="text-lg font-medium") Monthly
+							.content 
+								.desc(class="text-lg font-medium mb-5") bEssential features for individuals or small teams, limited support. 
+								.list-benefit 
+									ul
+										-for(i=0; i<6; i++)
+											li 
+												.icon 
+													<i class="fa-light fa-circle-check"></i>
+												.text 100GB Storage
+							a(data-fancybox data-src="#popup-service" class="btn btn-primary !w-full text-center justify-center mx-auto")
+								.text.text-center Get started
 
 	#popup-service.hidden 
 		.wrapper-popup 

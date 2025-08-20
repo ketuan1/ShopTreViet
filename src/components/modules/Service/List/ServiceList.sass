@@ -53,18 +53,38 @@
 
 	.tab-content
 		.item
-			backdrop-filter: blur(16.4027709961px)
-			background: linear-gradient(195deg,#00ff5b1a,#00ff5b05,#00ff5b0f)
-			@apply border-2 border-solid border-primary-1 px-5 py-8 rounded-3xl text-primary-5
+			@apply px-5 py-8 rounded-3xl text-primary-5 flex flex-col gap-2
+			&:nth-child(1)
+				box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
+				@apply border-2 border-solid border-primary-1
+			&:nth-child(2)
+				@apply bg-primary-1 text-white
+				.img
+					i
+						@apply text-white
+				a
+					@apply bg-white
+					.text
+						@apply text-primary-1
+					&:hover
+						@apply bg-primary-3 border-transparent
+						.text
+							@apply text-white
+			&:nth-child(3)
+				@apply bg-[#07192f] text-white
+			.img
+				i
+					@apply rem:text-[50px] font-light text-primary-1
 			.content
 				ul
-					@apply flex flex-col gap-2
+					@apply flex flex-col gap-2 mb-5
 					li
 						@apply flex items-center gap-2
 						i
-							@apply text-sm font-light
+							@apply text-lg font-medium
 						.text
-							@apply text-sm font-normal
+							@apply text-lg font-medium
+
 #popup-service
 	@apply bg-white rounded-3xl rem:max-w-[900px] w-full
 	.wrapper-popup
