@@ -1,0 +1,51 @@
+include ../../global/Breadcrumb/Breadcrumb.pug
+
+section.section-register.relative.py-20 
+	.container 
+		.row 
+			.col(class="lg:w-1/2 mx-auto")
+				.wrap-register(data-form="register") 
+					.content 
+						h2(class="text-32 font-bold text-linear-1") Đăng ký
+						.list-tab-form 
+							ul 
+								li 
+									a(class="active"  data-tab="register")  Đăng ký
+								li 
+									a(data-tab="login" )  Đăng nhập
+					.main-form 
+						.item 
+							input(type="text" placeholder="Họ và tên")
+						.item 
+							input(type="text" placeholder="Email")
+						.item 
+							input(type="text" placeholder="Số điện thoại của bạn")
+						.item 
+							input(type="text" placeholder="Mật khẩu")
+						.wrap-policy(class="flex-center gap-3 text-center items-start")
+							input(type="checkbox")
+							div Đồng ý với <span>Quy định bảo mật</span> và <span>Thoản thuận sử dụng</span> của Shoptreviet
+						.question-form 
+							div(class="text-base font-light text-white text-center") Bạn đã có tài khoản?<a> Đăng nhập ngay</a>
+						a(href="" class="btn btn-primary mx-auto")
+							.text ĐĂNG KÝ
+							.icon
+				.wrap-login(data-form="login")  
+					.content 
+						h2(class="text-32 font-bold text-linear-1") Đăng nhập
+						.list-tab-form 
+							ul 
+								li 
+									a(data-tab="register")  Đăng ký
+								li 
+									a(class="active" data-tab="login")  Đăng nhập
+					.main-form 
+						.item 
+							input(type="text" placeholder="Email")
+						.item 
+							input(type="text" placeholder="Mật khẩu")
+						.question-form 
+							div(class="text-base font-light text-white") Bạn chưa đăng ký? <a>Tạo tài khoản ngay</a>
+						a(href="" class="btn btn-primary mx-auto")
+							.text ĐĂNG NHẬP
+							.icon

@@ -1,0 +1,51 @@
+.section-register
+	.wrap-register,
+	.wrap-login
+		box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, .2)
+		@apply border-solid border-2 border-white rounded-[20px] p-16 overflow-hidden
+		.content
+			@apply flex-between pb-6
+			.list-tab-form
+				ul
+					@apply flex items-center gap-4
+					li
+						a
+							@apply text-lg font-normal text-black transition-all duration-300 cursor-pointer
+							&.active
+								@apply border-b border-solid border-primary-1 text-primary-1
+							&:hover
+								@apply border-b border-solid border-primary-1 text-primary-1
+		.main-form
+			@apply flex flex-col gap-6
+			.item
+				@apply w-full
+				input
+					@apply w-full outline-none border-solid border border-neutral-200 text-black
+					@apply py-3 px-5 rounded-3xl
+			.wrap-policy
+				div
+					@apply text-base font-light text-black text-center flex-1
+				input
+					border-radius: 3px
+					border: 1px solid #000
+					@apply appearance-none rem:w-[24px] rem:h-[21px] relative cursor-pointer bg-transparent 
+					&::focus
+						@apply border-primary-1 outline-none
+					&:checked
+						@apply border-primary-1 outline-none
+						border-color: #000
+					&:checked::after
+						content: ''
+						border: solid #000
+						border-width: 0 2px 2px 0
+						transform: rotate(45deg)
+						@apply absolute rem:top-[2px] rem:left-[8px] rem:w-[6px] rem:h-[12px] rem:border-[0px_2px_2px_0px]
+			.question-form
+				div
+					@apply text-base font-normal text-black
+					a
+						@apply cursor-pointer text-primary-1
+	.error-message
+		@apply text-black
+	.success-message-dk
+		@apply mt-4
