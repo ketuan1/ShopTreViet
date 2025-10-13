@@ -4,11 +4,13 @@
 			@apply flex flex-col gap-10 p-5 lg:p-0
 		.filter-category
 			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
-			@apply bg-white p-7
+			@apply bg-white
+			.title-sidebar
+				@apply bg-primary-1 text-white p-4
 			.list-filter
 				@apply mt-5
 				ul
-					@apply flex flex-col gap-3
+					@apply flex flex-col gap-3 p-4
 					li
 						&:last-child
 							a
@@ -22,11 +24,15 @@
 									@apply text-primary-1
 	.filter-attribute
 		box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px
-		@apply bg-white p-7
+		@apply bg-white
+		.title-sidebar
+			@apply bg-primary-1 text-white p-4
 		.list-filter
-			@apply mt-5
+			@apply p-5
+			.facetwp-facet
+				@apply mb-0 #{!important}
 			ul
-				@apply flex flex-col gap-3
+				@apply flex flex-col gap-3 p-4
 				li
 					a
 						@apply rem:text-[16px] font-medium text-primary-5 leading-5 cursor-pointer

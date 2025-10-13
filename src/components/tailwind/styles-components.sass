@@ -34,6 +34,25 @@
 				&.active
 					a
 						@apply bg-primary-3
+		.facetwp-facet
+			@apply mb-0 #{!important}
+			.facetwp-pager
+				@apply flex-center gap-2
+				a
+					@apply rem:text-[18px] font-medium leading-5 cursor-pointer
+					@apply rem:w-[45px] rem:h-[45px] rounded-full flex-center bg-primary-1 text-white
+					&:hover
+						@apply bg-primary-3
+					&.active
+						@apply bg-primary-3
+
+	.form-row
+		input,
+		select
+			@apply w-full border border-solid border-neutral-200 text-black
+			@apply py-3 px-5 rounded-3xl mt-3
+	.icon-cart-empty
+		@apply rem:text-[120px] font-thin
 	.item-product
 		.wrap-btn-add-cart
 			&::after
@@ -87,7 +106,7 @@
 					@apply text-primary-1
 			h3
 				@apply text-primary-5 rem:text-[20px] rem:leading-[26px] font-bold
-				@apply line-clamp-2 rem:h-[52px]
+				@apply line-clamp-1
 			.category
 				a
 					@apply text-neutral-500 rem:text-[18px] rem:leading-[24px] font-normal

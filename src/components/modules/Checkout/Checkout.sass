@@ -1,0 +1,97 @@
+.section-page-checkout
+	h3
+		@apply mb-5
+		@extend .title-40
+	.col-left
+		.woocommerce-billing-fields__field-wrapper
+			@apply flex flex-col gap-5
+			input,
+			select,
+			.select2-selection--single
+				@apply w-full border border-solid border-neutral-200 text-black
+				@apply py-3 px-5 rounded-3xl mt-3
+			.select2-selection--single
+				@apply h-full
+			.select2-selection__arrow
+				@apply rem:top-[25px] rem:right-[20px]
+			.form-row
+				label
+					@apply text-lg font-normal
+		.devvn_xuat_hoa_don_do
+			@apply mt-5
+			.devvn_xuat_vat_input_label
+				@apply text-lg font-bold text-primary-1
+				.devvn_xuat_vat_input
+					@apply rem:w-[18px] rem:h-[18px]
+			.devvn_xuat_vat_wrap,
+			.form-row
+				@apply mt-3
+			.input-text
+				@apply w-full border border-solid border-neutral-200 text-black
+				@apply py-3 px-5 rounded-3xl mt-3
+	#coupon_code
+		@apply w-full border border-solid border-neutral-200 text-black
+		@apply py-3 px-5 rounded-3xl mt-3
+	.col-right
+		@apply bg-[#f7f7f7] p-8  h-full sticky rem:top-[110px]
+		&::before,
+		&::after
+			content: ''
+			background-position: -2px -6px, 0 0
+			inset-inline: 0
+			background-size: r(15px) r(15px)
+			background-image: radial-gradient(farthest-side, transparent 6px, #f7f7f7 0)
+			@apply absolute rem:top-[-10px] rem:h-[10px]
+		&::after
+			@apply rem:bottom-[-10px] top-auto
+		.woocommerce-checkout-review-order
+			@apply bg-white p-5 rounded-xl mb-8
+			.shop_table 
+				@apply w-full
+				> *
+					@apply text-lg
+				tr
+					@apply mb-3 flex justify-between
+				thead
+					tr
+						@apply flex gap-3 justify-between w-full
+				.order-total
+					@apply flex justify-between gap-3
+		.payment_box.payment_method_bacs,
+		.payment_box.payment_method_cheque
+				@apply bg-white p-5 rounded-xl my-5
+				p
+					@apply text-lg font-normal
+		.woocommerce-checkout-payment
+			label
+				@apply text-lg font-bold
+		.woocommerce-privacy-policy-text
+			@apply text-lg font-normal my-5
+		#place_order
+			@apply bg-primary-1 border-transparent overflow-hidden py-3 px-5 rounded-3xl w-full
+			@apply text-white text-xl font-normal gap-5 transition-all duration-300
+			&:hover
+				@apply bg-primary-3
+
+.section-page-thank
+	.woocommerce-notice--success 
+		&.woocommerce-thankyou-order-received
+			border: 2px dashed #199744
+			@apply p-8 text-center text-2xl font-medium text-green-500 mb-10
+	.wc-bacs-bank-details-account-name
+		@apply text-primary-1 my-3
+	.woocommerce-order-details__title,
+	.woocommerce-column__title
+		@apply mb-5
+	table
+		tfoot
+			tr
+				&:nth-child(2)
+					td
+						@apply text-2xl font-bold
+	.woocommerce-customer-details
+		address
+			@apply p-5
+	ul.order_details
+		@media (max-width: 767.98px)
+			@apply flex flex-col gap-4 mb-3

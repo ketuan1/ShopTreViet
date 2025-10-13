@@ -1,0 +1,13 @@
+section.section-home-category.section-large
+	.container
+		h2(class="title-40 mb-10 text-center") New arrivals
+		.grid(class="md:grid-cols-2 lg:grid-cols-4 gap-10")
+			-for(i=0; i<4; i++)
+				.item.relative
+					.image(class="img-ratio ratio:pt-[460_357] img-zoom")
+						img(src="./img/1.png", alt="")
+					.content
+						h3(class="text-lg font-normal text-white")
+							a(href="") Evaporated Milk
+						.icon 
+							i(class="fa-thin fa-arrow-right text-white text-base font-light")
