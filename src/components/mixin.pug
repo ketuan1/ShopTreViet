@@ -29,7 +29,7 @@ mixin ItemProduct
 				img(src="./img/1.png", alt="")
 			.wrap-button-view
 				.action-view
-					a(class="btn-view btn-actions")
+					a(class="btn-view btn-actions" data-fancybox data-src="#popup-view")
 						i(class="fa-regular fa-eye")
 			.wrap-btn-add-cart
 				a(class="btn-add-cart")
@@ -41,6 +41,7 @@ mixin ItemProduct
 				a(href="") Blog, 
 				a(href="") Animated
 			.price 400.000 VNĐ
+
 mixin ItemNewsMain()
 	.item-news-main(x-loop-item="News" x-loop-mode="NewsItemMain")
 		.img(class="mb-5 rounded-2.5 overflow-hidden zoom-img")

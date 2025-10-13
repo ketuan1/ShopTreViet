@@ -62,7 +62,7 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			primary: ["Montserrat", "sans-serif"],
+			primary: ["IBM Plex Sans", "sans-serif"],
 			awesome: ['"Font Awesome 6 Pro"'],
 		},
 		fontSize: {

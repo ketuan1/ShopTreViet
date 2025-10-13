@@ -1,0 +1,104 @@
+.section-page-cart
+	.wrap-cart
+		grid-template-columns: 1fr 350px
+		gap: 2.0833333333rem
+		@apply md:grid
+		h2
+			@apply text-primary-5 mb-5
+			@extend .title-40
+		.col-left
+			.woocommerce-cart-form
+				a
+					@apply inline-block
+					img
+						@apply rem:w-[120px] rem:h-[120px] object-cover
+				.product-thumbnail 
+					@apply flex items-center gap-4
+					&::before
+						@apply hidden
+				.wrap-remove
+					.remove
+						@apply absolute top-0 left-0 bg-primary-1
+						@apply text-white #{!important}
+				.wrap-name
+					a
+						@apply text-xl md:text-lg font-normal
+		.col-right
+			.cart_totals 
+				@apply w-full #{!important}
+			.wc-proceed-to-checkout
+				.checkout-button
+					@apply bg-primary-1 rounded-3xl
+					&:hover
+						@apply bg-primary-3
+		table
+			tbody
+				@media (max-width: 567px)
+					@apply flex flex-col gap-4
+			th
+				@apply text-xl
+			td
+				@apply py-4 px-3 
+				@apply bg-transparent #{!important}
+		.actions
+			button
+				@apply bg-primary-1 text-white
+		.coupon
+			@apply flex flex-wrap gap-3 lg:gap-0
+			.input-text
+				@apply w-full lg:rem:w-[300px] #{!important}
+			.coupon-error-notice
+				@media (max-width: 767.98px)
+					@apply mt-0 #{!important}
+.section-cart-empty
+	@apply text-center
+	.cart-empty
+		@apply text-2xl font-medium text-primary-5 mb-5
+	.btn-return-to-shop
+		@apply py-4 px-5 cursor-pointer select-none transition-all duration-300 rounded-3xl #{!important}
+		@apply bg-primary-1 text-white #{!important}
+		&:hover
+			@apply bg-primary-3 #{!important}
+	
+.section-page-navigation 
+	.title
+		@apply border-b border-solid border-neutral-200 
+	.woocommerce-MyAccount-content
+		.woocommerce-form-row 
+			@apply mb-4
+		p
+			@apply text-lg font-normal 
+			a
+				@apply text-primary-1 font-medium
+		.edit-account
+			.woocommerce-Button
+				@apply py-4 px-5 cursor-pointer select-none transition-all duration-300 rounded-3xl #{!important}
+				@apply bg-primary-1 text-white #{!important}
+				&:hover
+					@apply bg-primary-3 #{!important}
+	.wrap-dashboard
+		@apply mt-4
+		.item
+			@apply p-8 border border-solid border-neutral-200 rounded-3xl
+			@apply text-center
+			.icon
+				i
+					@apply text-3xl font-normal
+			h3
+				@apply text-xl font-normal text-primary-5 mt-3
+			&:hover
+				@apply bg-primary-1
+				h3
+					@apply text-white
+				.icon
+					@apply text-white
+	.woocommerce-MyAccount-navigation
+		ul
+			li
+				a
+					@apply text-base
+					@apply p-3 rounded-3xl mb-1 flex overflow-hidden
+				&.is-active,
+				&:hover
+					a
+						@apply bg-neutral-100
